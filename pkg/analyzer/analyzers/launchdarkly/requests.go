@@ -500,7 +500,7 @@ func captureProjectEnvExperiments(client *http.Client, token string, projectKey 
 				Type: experimentKey,
 				MetaData: map[string]string{
 					MetadataKey:    exp.Key,
-					"Maintiner ID": exp.MaintainerID,
+					"Maintainer ID": exp.MaintainerID,
 				},
 				ParentResource: &parent,
 			}

@@ -179,7 +179,7 @@ func (b baseUnitReporter) UnitErr(ctx context.Context, err error) error {
 	return nil
 }
 
-// UnitReporter defines the interface a source will use to report whether a
+// UnitReporter defines the interface that a source will use to report whether a
 // unit was found during enumeration. Either method may be called any number of
 // times. Implementors of this interface should allow for concurrent calls.
 type UnitReporter interface {
@@ -198,7 +198,7 @@ type SourceUnitChunker interface {
 	ChunkUnit(ctx context.Context, unit SourceUnit, reporter ChunkReporter) error
 }
 
-// ChunkReporter defines the interface a source will use to report whether a
+// ChunkReporter defines the interface that a source will use to report whether a
 // chunk was found during unit chunking. Either method may be called any number
 // of times. Implementors of this interface should allow for concurrent calls.
 type ChunkReporter interface {

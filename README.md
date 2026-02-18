@@ -38,7 +38,7 @@ We take the revenue from the enterprise product to fund more awesome open source
 
 # What is TruffleHog 🐽
 
-TruffleHog is the most powerful secrets **Discovery, Classification, Validation,** and **Analysis** tool. In this context, secret refers to a credential a machine uses to authenticate itself to another machine. This includes API keys, database passwords, private encryption keys, and more.
+TruffleHog is the most powerful secrets **Discovery, Classification, Validation,** and **Analysis** tool. In this context, secret refers to a credential that a machine uses to authenticate itself to another machine. This includes API keys, database passwords, private encryption keys, and more.
 
 ## Discovery 🔍
 

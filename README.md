@@ -689,7 +689,7 @@ status code, the secret is considered verified. If verification fails due to net
 
 Custom Detectors support a few different filtering mechanisms: entropy, regex targeting the entire match, regex targeting the captured secret,
 and excluded word lists checked against the secret (captured group if present, entire match if capture group is not present). Note that if
-your custom detector has multiple `regex` set (in this example `hogID`, and `hogToken`), then the filters get applied to each regex. [Here](examples/generic_with_filters.yml) is an example of a custom detector using these filters.
+your custom detector has multiple `regex` set (in this example `hogID`, and `hogToken`), then the filters get applied to each regex. [generic_with_filters.yml](examples/generic_with_filters.yml) is an example of a custom detector using these filters.
 
 **NB:** This feature is alpha and subject to change.
 

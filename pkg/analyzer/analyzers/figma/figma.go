@@ -118,7 +118,7 @@ func AnalyzePermissions(cfg *config.Config, token string) (*secretInfo, error) {
 }
 
 // determineScopeStatus takes the API response status code and uses it along with the expected
-// status codes to dermine whether the access token has the required scope to perform that action.
+// status codes to determine whether the access token has the required scope to perform that action.
 // It returns a ScopeStatus which can be Granted, Denied, or Unverified.
 func determineScopeStatus(statusCode int, endpoint endpoint) ScopeStatus {
 	if statusCode == endpoint.ExpectedStatusCodeWithScope || statusCode == http.StatusOK {

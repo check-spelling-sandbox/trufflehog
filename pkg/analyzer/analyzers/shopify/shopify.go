@@ -73,7 +73,7 @@ func secretInfoToAnalyzerResult(info *SecretInfo) *analyzers.AnalyzerResult {
 
 	for _, category := range categoryOrder {
 		if val, ok := info.Scopes[category]; ok {
-			cateogryResource := &analyzers.Resource{
+			categoryResource := &analyzers.Resource{
 				Name:               category,
 				FullyQualifiedName: resource.FullyQualifiedName + "/" + category, // shop.domain/shop.email/category
 				Type:               "category",
@@ -82,7 +82,7 @@ func secretInfoToAnalyzerResult(info *SecretInfo) *analyzers.AnalyzerResult {
 
 			if sliceContains(val.Scopes, "Read") && sliceContains(val.Scopes, "Write") {
 				result.Bindings = append(result.Bindings, analyzers.Binding{
-					Resource: *cateogryResource,
+					Resource: *categoryResource,
 					Permission: analyzers.Permission{
 						Value: PermissionStrings[FullAccess],
 					},
@@ -96,7 +96,7 @@ func secretInfoToAnalyzerResult(info *SecretInfo) *analyzers.AnalyzerResult {
 					continue
 				}
 				result.Bindings = append(result.Bindings, analyzers.Binding{
-					Resource: *cateogryResource,
+					Resource: *categoryResource,
 					Permission: analyzers.Permission{
 						Value: lowerScope,
 					},

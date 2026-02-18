@@ -17,7 +17,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
 )
 
-func TestSendgrid_FromChunk(t *testing.T) {
+func TestSendGrid_FromChunk(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
 	testSecrets, err := common.GetSecret(ctx, "trufflehog-testing", "detectors5")

@@ -63,14 +63,14 @@ func AnalyzeAndPrintPermissions(cfg *config.Config, key string) {
 		return
 	}
 
-	color.Green("[!] Valid Sendgrid API Key\n\n")
+	color.Green("[!] Valid SendGrid API Key\n\n")
 
 	if slices.Contains(info.RawScopes, "user.email.read") {
-		color.Green("[*] Sendgrid Key Type: Full Access Key")
+		color.Green("[*] SendGrid Key Type: Full Access Key")
 	} else if slices.Contains(info.RawScopes, "billing.read") {
-		color.Yellow("[*] Sendgrid Key Type: Billing Access Key")
+		color.Yellow("[*] SendGrid Key Type: Billing Access Key")
 	} else {
-		color.Yellow("[*] Sendgrid Key Type: Restricted Access Key")
+		color.Yellow("[*] SendGrid Key Type: Restricted Access Key")
 	}
 
 	if slices.Contains(info.RawScopes, "2fa_required") {

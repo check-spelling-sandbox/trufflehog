@@ -128,7 +128,7 @@ var analyzerTypeStrings = map[AnalyzerType]string{
 	AnalyzerTypeOpsgenie:      "Opsgenie",
 	AnalyzerTypePostgres:      "Postgres",
 	AnalyzerTypePostman:       "Postman",
-	AnalyzerTypeSendgrid:      "Sendgrid",
+	AnalyzerTypeSendgrid:      "SendGrid",
 	AnalyzerTypeShopify:       "Shopify",
 	AnalyzerTypeSlack:         "Slack",
 	AnalyzerTypeSourcegraph:   "Sourcegraph",

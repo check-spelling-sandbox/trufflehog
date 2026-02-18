@@ -35,7 +35,7 @@ func (s Scanner) Keywords() []string {
 	return []string{"SG."}
 }
 
-// FromData will find and optionally verify Sendgrid secrets in a given set of bytes.
+// FromData will find and optionally verify SendGrid secrets in a given set of bytes.
 func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (results []detectors.Result, err error) {
 	dataStr := string(data)
 

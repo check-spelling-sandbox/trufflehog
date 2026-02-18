@@ -44,7 +44,7 @@ func TestInvoiceocean_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a invoiceocean secret %s within %s", secret, url)),
+				data:   []byte(fmt.Sprintf("You can find an invoiceocean secret %s within %s", secret, url)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestInvoiceocean_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a invoiceocean secret %s within %s but not valid", inactiveSecret, url)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an invoiceocean secret %s within %s but not valid", inactiveSecret, url)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

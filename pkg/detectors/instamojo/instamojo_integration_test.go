@@ -45,7 +45,7 @@ func TestInstamojo_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a instamojo secret %s within id %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an instamojo secret %s within id %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -62,7 +62,7 @@ func TestInstamojo_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a instamojo secret %s within but not valid, within id %s", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an instamojo secret %s within but not valid, within id %s", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

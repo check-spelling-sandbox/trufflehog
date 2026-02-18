@@ -44,7 +44,7 @@ func TestAPIMatic_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a apimatic secret %s within apimatic pass %s", secret, pass)),
+				data:   []byte(fmt.Sprintf("You can find an apimatic secret %s within apimatic pass %s", secret, pass)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestAPIMatic_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a apimatic secret %s within apimatic pass %s but not valid", inactiveSecret, pass)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an apimatic secret %s within apimatic pass %s but not valid", inactiveSecret, pass)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

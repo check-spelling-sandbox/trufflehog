@@ -47,7 +47,7 @@ func TestAnthropic_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a anthropic secret %s within", apiKey)),
+				data:   []byte(fmt.Sprintf("You can find an anthropic secret %s within", apiKey)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -64,7 +64,7 @@ func TestAnthropic_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a anthropic secret %s within but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an anthropic secret %s within but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -93,7 +93,7 @@ func TestAnthropic_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a anthropic secret %s within", apiKey)),
+				data:   []byte(fmt.Sprintf("You can find an anthropic secret %s within", apiKey)),
 				verify: true,
 			},
 			want: []detectors.Result{

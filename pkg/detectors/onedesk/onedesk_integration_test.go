@@ -44,7 +44,7 @@ func TestOnedesk_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a onedesk email %s within onedesk password %s", email, pword)),
+				data:   []byte(fmt.Sprintf("You can find an onedesk email %s within onedesk password %s", email, pword)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestOnedesk_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a onedesk secret %s within onedesk password %s but not valid", email, inactivePword)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an onedesk secret %s within onedesk password %s but not valid", email, inactivePword)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

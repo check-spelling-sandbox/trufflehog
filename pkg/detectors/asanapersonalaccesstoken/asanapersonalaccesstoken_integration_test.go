@@ -50,7 +50,7 @@ func TestAsanaPersonalAccessToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a asana secret %s within", oldFormatSecret)),
+				data:   []byte(fmt.Sprintf("You can find an asana secret %s within", oldFormatSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -66,7 +66,7 @@ func TestAsanaPersonalAccessToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a asana secret %s within but unverified", inactiveSecret)),
+				data:   []byte(fmt.Sprintf("You can find an asana secret %s within but unverified", inactiveSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -82,7 +82,7 @@ func TestAsanaPersonalAccessToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a asana secret %s within", newFormatSecret)),
+				data:   []byte(fmt.Sprintf("You can find an asana secret %s within", newFormatSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -98,7 +98,7 @@ func TestAsanaPersonalAccessToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a asana secret %s but unverified", inactiveNewFormatSecret)),
+				data:   []byte(fmt.Sprintf("You can find an asana secret %s but unverified", inactiveNewFormatSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{

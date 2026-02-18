@@ -391,7 +391,7 @@ func (s *Source) Enumerate(ctx context.Context, reporter sources.UnitReporter) e
 			if !s.filteredRepoCache.Exists(name) {
 				return ctx.Err()
 			}
-			// Only report a unit once.
+			// Only report an unit once.
 			if _, ok := seenUnits[su]; ok {
 				return ctx.Err()
 			}

@@ -45,7 +45,7 @@ func TestAha_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.ConstantResponseHttpClient(200, "{}")},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aha secret %s within %s but verified", secret, domain)),
+				data:   []byte(fmt.Sprintf("You can find an aha secret %s within %s but verified", secret, domain)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -61,7 +61,7 @@ func TestAha_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aha secret %s within %s but verified", secret, domain)),
+				data:   []byte(fmt.Sprintf("You can find an aha secret %s within %s but verified", secret, domain)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -79,7 +79,7 @@ func TestAha_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.ConstantResponseHttpClient(500, "{}")},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aha secret %s within %s but verified", secret, domain)),
+				data:   []byte(fmt.Sprintf("You can find an aha secret %s within %s but verified", secret, domain)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -97,7 +97,7 @@ func TestAha_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aha secret %s within but not valid domain %s", inactiveSecret, domain)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an aha secret %s within but not valid domain %s", inactiveSecret, domain)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

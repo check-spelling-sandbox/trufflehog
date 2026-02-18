@@ -45,7 +45,7 @@ func TestAppcues_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a appcues secret %s within appcues user %s and appcues id %s", secret, user, id)),
+				data:   []byte(fmt.Sprintf("You can find an appcues secret %s within appcues user %s and appcues id %s", secret, user, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -65,7 +65,7 @@ func TestAppcues_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a appcues secret %s within appcues user %s and appcues id %s but not valid", inactiveSecret, user, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an appcues secret %s within appcues user %s and appcues id %s but not valid", inactiveSecret, user, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

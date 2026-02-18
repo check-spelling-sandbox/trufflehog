@@ -39,7 +39,7 @@ func (s Scanner) Keywords() []string {
 func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (results []detectors.Result, err error) {
 	dataStr := string(data)
 
-	// find all the matching keys and ids in the data and make a unique maps for both.
+	// find all the matching keys and ids in the data and make an unique maps for both.
 	uniqueSecrets, uniqueIds, uniqueTokens := make(map[string]struct{}), make(map[string]struct{}), make(map[string]struct{})
 
 	for _, foundKey := range secretPat.FindAllStringSubmatch(dataStr, -1) {

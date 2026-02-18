@@ -46,7 +46,7 @@ func TestAxonaut_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a azure repository url %s password %s", url, password)),
+				data:   []byte(fmt.Sprintf("You can find an azure repository url %s password %s", url, password)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -62,7 +62,7 @@ func TestAxonaut_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a azure repository url %s password %s but unverified", url, inactivePassword)),
+				data:   []byte(fmt.Sprintf("You can find an azure repository url %s password %s but unverified", url, inactivePassword)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -89,7 +89,7 @@ func TestAxonaut_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a azure repository url %s password %s but unverified", inactiveUrl, inactivePassword)),
+				data:   []byte(fmt.Sprintf("You can find an azure repository url %s password %s but unverified", inactiveUrl, inactivePassword)),
 				verify: true,
 			},
 			want:    nil,

@@ -91,7 +91,7 @@ func TestAirtablepersonalaccesstoken_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a airtablepersonalaccesstoken secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an airtablepersonalaccesstoken secret %s within", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -108,7 +108,7 @@ func TestAirtablepersonalaccesstoken_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.ConstantResponseHttpClient(404, "")},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a airtablepersonalaccesstoken secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an airtablepersonalaccesstoken secret %s within", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{

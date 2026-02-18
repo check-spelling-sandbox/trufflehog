@@ -72,5 +72,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Refiner is a user feedback platform. Refiner keys can be used to authenticate and identify users within the Refiner platform."
+	return "Refiner is an user feedback platform. Refiner keys can be used to authenticate and identify users within the Refiner platform."
 }

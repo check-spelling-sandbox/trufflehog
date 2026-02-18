@@ -44,7 +44,7 @@ func TestEagleEyeNetworks_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a eagleeyenetworks secret %s within eagleeyenetworks %s", secret, email)),
+				data:   []byte(fmt.Sprintf("You can find an eagleeyenetworks secret %s within eagleeyenetworks %s", secret, email)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestEagleEyeNetworks_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a eagleeyenetworks secret %s within eagleeyenetworks %s but not valid", inactiveSecret, email)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an eagleeyenetworks secret %s within eagleeyenetworks %s but not valid", inactiveSecret, email)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

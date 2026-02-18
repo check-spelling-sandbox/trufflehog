@@ -45,7 +45,7 @@ func TestArtifactory_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a artifactory secret %s and domain %s", secret, appURL)),
+				data:   []byte(fmt.Sprintf("You can find an artifactory secret %s and domain %s", secret, appURL)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -61,7 +61,7 @@ func TestArtifactory_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a artifactory secret %s but not valid on endpoint %s", inactiveSecret, appURL)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an artifactory secret %s but not valid on endpoint %s", inactiveSecret, appURL)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

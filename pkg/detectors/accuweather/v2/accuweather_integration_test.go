@@ -45,7 +45,7 @@ func TestAccuweather_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a accuweather secret %s within but verified", secret)),
+				data:   []byte(fmt.Sprintf("You can find an accuweather secret %s within but verified", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -61,7 +61,7 @@ func TestAccuweather_FromChunk(t *testing.T) {
 			s:    Scanner{Scanner: v1.Scanner{Client: common.SaneHttpClientTimeOut(1 * time.Microsecond)}},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a accuweather secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an accuweather secret %s within", secret)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -79,7 +79,7 @@ func TestAccuweather_FromChunk(t *testing.T) {
 			s:    Scanner{Scanner: v1.Scanner{Client: common.ConstantResponseHttpClient(500, "{}")}},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a accuweather secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an accuweather secret %s within", secret)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -97,7 +97,7 @@ func TestAccuweather_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a accuweather secret %s within but verified", inactiveSecret)),
+				data:   []byte(fmt.Sprintf("You can find an accuweather secret %s within but verified", inactiveSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{

@@ -28,7 +28,7 @@ type JobProgressHook interface {
 	// ReportError is called when any general error is encountered, usually
 	// from enumeration.
 	ReportError(JobProgressRef, error)
-	// ReportUnit is called when a unit has been enumerated. If the source
+	// ReportUnit is called when an unit has been enumerated. If the source
 	// does not support enumeration this method will never be called.
 	ReportUnit(JobProgressRef, SourceUnit)
 	// ReportChunk is called when a chunk has been produced for the given

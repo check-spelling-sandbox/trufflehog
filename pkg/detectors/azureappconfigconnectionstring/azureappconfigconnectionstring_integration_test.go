@@ -46,7 +46,7 @@ func TestAzureAppConfigConnectionString_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    ctx,
-				data:   []byte(fmt.Sprintf("You can find a azureappconfigconnectionstring secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an azureappconfigconnectionstring secret %s within", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -63,7 +63,7 @@ func TestAzureAppConfigConnectionString_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    ctx,
-				data:   []byte(fmt.Sprintf("You can find a azureappconfigconnectionstring secret %s but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an azureappconfigconnectionstring secret %s but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

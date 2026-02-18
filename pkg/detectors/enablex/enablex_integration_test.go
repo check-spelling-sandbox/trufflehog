@@ -44,7 +44,7 @@ func TestEnablex_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a enablex secret %s within enablex %s", secret, user)),
+				data:   []byte(fmt.Sprintf("You can find an enablex secret %s within enablex %s", secret, user)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestEnablex_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a enablex secret %s within enablex %s but not valid", inactiveSecret, user)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an enablex secret %s within enablex %s but not valid", inactiveSecret, user)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

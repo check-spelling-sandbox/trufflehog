@@ -44,7 +44,7 @@ func TestAirbrakeProjectKey_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a airbrake secret %s within airbrake %s but verified", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an airbrake secret %s within airbrake %s but verified", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestAirbrakeProjectKey_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a airbrake secret %s within airbrake %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an airbrake secret %s within airbrake %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

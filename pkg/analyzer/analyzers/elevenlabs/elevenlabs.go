@@ -113,7 +113,7 @@ func AnalyzePermissions(cfg *config.Config, key string) (*SecretInfo, error) {
 	secretInfo.Valid = true
 
 	// if user is not nil, that means the key has user read permission. Set the user information in secret info user
-	// user can only be nil when the key is valid but it does not have a user read permission
+	// user can only be nil when the key is valid but it does not have an user read permission
 	if user != nil {
 		elevenLabsUserToSecretInfoUser(*user, secretInfo)
 	}
@@ -163,7 +163,7 @@ func secretInfoToAnalyzerResult(info *SecretInfo) *analyzers.AnalyzerResult {
 		Bindings:     make([]analyzers.Binding, 0),
 	}
 
-	// for resources to be uniquely identified, we need a unique id to be appended in resource fully qualified name
+	// for resources to be uniquely identified, we need an unique id to be appended in resource fully qualified name
 	uniqueId := info.User.ID
 	if uniqueId == "" {
 		uniqueId = uuid.NewString()
@@ -259,7 +259,7 @@ func elevenLabsUserToSecretInfoUser(user User, secretInfo *SecretInfo) {
 	// add user read scope to secret info
 	secretInfo.Permissions = append(secretInfo.Permissions, PermissionStrings[UserRead])
 	// map resource to secret info
-	// as user is accessible through a specific permission and has a unique id it is also a resource
+	// as user is accessible through a specific permission and has an unique id it is also a resource
 	secretInfo.ElevenLabsResources = append(secretInfo.ElevenLabsResources, ElevenLabsResource{
 		ID:         user.ID,
 		Name:       user.Name,

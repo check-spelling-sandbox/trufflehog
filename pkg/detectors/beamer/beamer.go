@@ -63,7 +63,7 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Beamer is a user engagement platform that helps you communicate product updates and other important information to your users. Beamer API keys can be used to access and manage this information."
+	return "Beamer is an user engagement platform that helps you communicate product updates and other important information to your users. Beamer API keys can be used to access and manage this information."
 }
 
 func verifyBeamer(ctx context.Context, client *http.Client, key string) (bool, error) {

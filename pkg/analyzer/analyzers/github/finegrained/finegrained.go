@@ -937,7 +937,7 @@ func getBlockUserPermission(client *gh.Client, user *gh.User) (Permission, error
 
 	// Risk: Extremely Low
 	// -> PUT request to /user/blocks/{username}
-	// -> We're blocking a user that doesn't exist. See RANDOM_STRING above.
+	// -> We're blocking an user that doesn't exist. See RANDOM_STRING above.
 	resp, err = client.Users.BlockUser(context.Background(), RANDOM_STRING)
 	switch resp.StatusCode {
 	case 403:
@@ -945,7 +945,7 @@ func getBlockUserPermission(client *gh.Client, user *gh.User) (Permission, error
 	case 404:
 		return BlockUserWrite, nil
 	case 204:
-		log.Fatal("This should never happen. We are blocking a user that doesn't exist.")
+		log.Fatal("This should never happen. We are blocking an user that doesn't exist.")
 		return BlockUserWrite, nil
 	default:
 		return Invalid, err
@@ -975,7 +975,7 @@ func getCodespacesUserPermission(client *gh.Client, user *gh.User) (Permission, 
 	case 422:
 		return CodespaceUserSecretsWrite, nil
 	case 201, 204:
-		log.Fatal("This should never happen. We are creating a user secret with an invalid payload.")
+		log.Fatal("This should never happen. We are creating an user secret with an invalid payload.")
 		return CodespaceUserSecretsWrite, nil
 	default:
 		return Invalid, err

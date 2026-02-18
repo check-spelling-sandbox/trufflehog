@@ -557,7 +557,7 @@ func (p *Progress) GetProgress() *Progress {
 //
 
 // GetEncodedResumeInfoFor gets the encoded resume information for the provided
-// ID, usually a unit ID.
+// ID, usually an unit ID.
 func (p *Progress) GetEncodedResumeInfoFor(id string) string {
 	p.mut.Lock()
 	defer p.mut.Unlock()
@@ -566,7 +566,7 @@ func (p *Progress) GetEncodedResumeInfoFor(id string) string {
 }
 
 // SetEncodedResumeInfoFor sets the encoded resume information for the provided
-// ID, usually a unit ID.
+// ID, usually an unit ID.
 func (p *Progress) SetEncodedResumeInfoFor(id, value string) {
 	p.mut.Lock()
 	defer p.mut.Unlock()

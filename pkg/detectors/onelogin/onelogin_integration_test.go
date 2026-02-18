@@ -43,7 +43,7 @@ func TestOnelogin_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a onelogin secret=%s within onelogin id %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an onelogin secret=%s within onelogin id %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestOnelogin_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a onelogin secret=%s within onelogin id %s", secretInactive, id)),
+				data:   []byte(fmt.Sprintf("You can find an onelogin secret=%s within onelogin id %s", secretInactive, id)),
 				verify: true,
 			},
 			want: []detectors.Result{

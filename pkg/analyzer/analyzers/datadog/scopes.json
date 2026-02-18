@@ -122,7 +122,7 @@
   {
     "name": "logs_read_data",
     "title": "Logs Read Data",
-    "description": "Read log data. In order to read log data, a user must have both this permission and Logs Read Index Data.",
+    "description": "Read log data. In order to read log data, an user must have both this permission and Logs Read Index Data.",
     "resource": "Logs",
     "test": {
       "endpoint": "/v2/logs/events",
@@ -446,7 +446,7 @@
   {
     "name": "rum_apps_write",
     "title": "RUM Apps Write",
-    "description": "Create, edit, and delete RUM applications. Creating a RUM application automatically generates a Client Token. In order to create Client Tokens directly, a user needs the Client Tokens Write permission.",
+    "description": "Create, edit, and delete RUM applications. Creating a RUM application automatically generates a Client Token. In order to create Client Tokens directly, an user needs the Client Tokens Write permission.",
     "resource": "RUM",
     "test": {
       "endpoint": "/v2/rum/applications/does-not-exist",

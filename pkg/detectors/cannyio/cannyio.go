@@ -70,5 +70,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Canny is a user feedback tool that helps you track and prioritize feature requests. Canny API keys can be used to access and manage feedback boards and other related data."
+	return "Canny is an user feedback tool that helps you track and prioritize feature requests. Canny API keys can be used to access and manage feedback boards and other related data."
 }

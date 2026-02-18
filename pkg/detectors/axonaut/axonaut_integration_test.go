@@ -43,7 +43,7 @@ func TestAxonaut_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a axonaut secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an axonaut secret %s within", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -59,7 +59,7 @@ func TestAxonaut_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a axonaut secret %s within but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an axonaut secret %s within but not valid", inactiveSecret)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

@@ -122,7 +122,7 @@ func WithSpanCalculator(spanCalculator spanCalculator) CoreOption {
 // Aho-Corasick algorithm. It is responsible for constructing and managing the trie for efficient
 // substring searches, as well as mapping keywords to their associated detectors for rapid lookups.
 type Core struct {
-	// prefilter is a ahocorasick struct used for doing efficient string
+	// prefilter is an ahocorasick struct used for doing efficient string
 	// matching given a set of words. (keywords from the rules in the config)
 	prefilter ahocorasick.Trie
 	// Maps for efficient lookups during detection.
@@ -284,7 +284,7 @@ func (ac *Core) FindDetectorMatches(chunkData []byte) []*DetectorMatch {
 	return uniqueDetectors
 }
 
-// CreateDetectorKey creates a unique key for each detector from its type, version, and, for
+// CreateDetectorKey creates an unique key for each detector from its type, version, and, for
 // custom regex detectors, its name.
 func CreateDetectorKey(d detectors.Detector) DetectorKey {
 	detectorType := d.Type()

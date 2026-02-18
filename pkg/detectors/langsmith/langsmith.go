@@ -96,5 +96,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "LangSmith is a unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not"
+	return "LangSmith is an unified observability & evals platform where teams can debug, test, and monitor AI app performance — whether building with LangChain or not"
 }

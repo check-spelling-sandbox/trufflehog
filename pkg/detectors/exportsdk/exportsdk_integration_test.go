@@ -44,7 +44,7 @@ func TestExportSDK_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a exportsdk secret %s within exportsdk %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an exportsdk secret %s within exportsdk %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestExportSDK_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a exportsdk secret %s within exportsdk %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an exportsdk secret %s within exportsdk %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

@@ -114,5 +114,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Api2Cart is a unified shopping cart data interface that allows interaction with multiple shopping cart platforms. Api2Cart API keys can be used to access and manipulate shopping cart data."
+	return "Api2Cart is an unified shopping cart data interface that allows interaction with multiple shopping cart platforms. Api2Cart API keys can be used to access and manipulate shopping cart data."
 }

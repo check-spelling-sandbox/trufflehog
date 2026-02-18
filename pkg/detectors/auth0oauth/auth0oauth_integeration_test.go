@@ -52,7 +52,7 @@ func TestAuth0oauth_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 client id %s client secret %s domain %s", clientId, clientSecret, domain)),
+				data:   []byte(fmt.Sprintf("You can find an auth0 client id %s client secret %s domain %s", clientId, clientSecret, domain)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -69,7 +69,7 @@ func TestAuth0oauth_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 client id %s client secret %s domain %s", clientIdUnauthorized, clientSecretUnauthorized, domainUnauthorized)),
+				data:   []byte(fmt.Sprintf("You can find an auth0 client id %s client secret %s domain %s", clientIdUnauthorized, clientSecretUnauthorized, domainUnauthorized)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -86,7 +86,7 @@ func TestAuth0oauth_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 client id %s client secret %s domain https://%s/oauth/token within but not valid", clientId, inactiveClientSecret, domain)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an auth0 client id %s client secret %s domain https://%s/oauth/token within but not valid", clientId, inactiveClientSecret, domain)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -114,7 +114,7 @@ func TestAuth0oauth_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 client id %s client secret %s domain %s", clientId, clientSecret, notFoundDomain)),
+				data:   []byte(fmt.Sprintf("You can find an auth0 client id %s client secret %s domain %s", clientId, clientSecret, notFoundDomain)),
 				verify: true,
 			},
 			want: []detectors.Result{

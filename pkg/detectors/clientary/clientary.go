@@ -47,7 +47,7 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Clientary is a one software app to manage Clients, Invoices, Projects, Proposals, Estimates, Hours, Payments, Contractors and Staff. Clientary keys can be used to access and manage invoices and other resources."
+	return "Clientary is an one software app to manage Clients, Invoices, Projects, Proposals, Estimates, Hours, Payments, Contractors and Staff. Clientary keys can be used to access and manage invoices and other resources."
 }
 
 // FromData will find and optionally verify RoninApp secrets in a given set of bytes.

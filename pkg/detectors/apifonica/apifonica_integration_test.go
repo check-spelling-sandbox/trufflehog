@@ -44,7 +44,7 @@ func TestApifonica_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a apifonica secret %s within apifonica token %s", secret, token)),
+				data:   []byte(fmt.Sprintf("You can find an apifonica secret %s within apifonica token %s", secret, token)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestApifonica_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a apifonica secret %s within apifonica token %s but not valid", inactiveSecret, token)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an apifonica secret %s within apifonica token %s but not valid", inactiveSecret, token)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

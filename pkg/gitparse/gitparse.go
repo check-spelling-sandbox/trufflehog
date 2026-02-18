@@ -38,7 +38,7 @@ const (
 // contentWriter defines a common interface for writing, reading, and managing diff content.
 // It abstracts the underlying storage mechanism, allowing flexibility in how content is handled.
 // This interface enables the use of different content storage strategies (e.g., in-memory buffer, file-based storage)
-// based on performance needs or resource constraints, providing a unified way to interact with different content types.
+// based on performance needs or resource constraints, providing an unified way to interact with different content types.
 type contentWriter interface { // Write appends data to the content storage.
 	// Write appends data to the content storage.
 	Write(data []byte) (int, error)

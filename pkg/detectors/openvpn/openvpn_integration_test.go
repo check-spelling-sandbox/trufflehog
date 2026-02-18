@@ -49,7 +49,7 @@ func TestOpenvpn_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a openvpn secret %s openvpn clientId %s and domain %s  within", clientSecret, clientId, domain)),
+				data:   []byte(fmt.Sprintf("You can find an openvpn secret %s openvpn clientId %s and domain %s  within", clientSecret, clientId, domain)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -67,7 +67,7 @@ func TestOpenvpn_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a openvpn secret %s openvpn clientId %s and domain %s within but not valid", inactiveClientSecret, clientId, domain)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an openvpn secret %s openvpn clientId %s and domain %s within but not valid", inactiveClientSecret, clientId, domain)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

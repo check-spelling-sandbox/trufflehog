@@ -959,7 +959,7 @@ func (s *Source) scanRepos(ctx context.Context, chunksChan chan *sources.Chunk) 
 			if s.authMethod == "UNAUTHENTICATED" {
 				path, repo, err = git.CloneRepoUsingUnauthenticated(ctx, repoURL, s.clonePath)
 			} else {
-				// If a username is not provided we need to use a default one in order to clone a private repo.
+				// If an username is not provided we need to use a default one in order to clone a private repo.
 				// Not setting "placeholder" as s.user on purpose in case any downstream services rely on a "" value for s.user.
 				user := s.user
 				if user == "" {
@@ -1163,7 +1163,7 @@ func (s *Source) ChunkUnit(ctx context.Context, unit sources.SourceUnit, reporte
 	if s.authMethod == "UNAUTHENTICATED" {
 		path, repo, err = git.CloneRepoUsingUnauthenticated(ctx, repoURL, s.clonePath)
 	} else {
-		// If a username is not provided we need to use a default one in order to clone a private repo.
+		// If an username is not provided we need to use a default one in order to clone a private repo.
 		// Not setting "placeholder" as s.user on purpose in case any downstream services rely on a "" value for s.user.
 		user := s.user
 		if user == "" {

@@ -45,7 +45,7 @@ func TestAgora_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a agora secret %s within agora id %s but verified", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an agora secret %s within agora id %s but verified", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -65,7 +65,7 @@ func TestAgora_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a agora secret %s within agora id %s but verified", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an agora secret %s within agora id %s but verified", secret, id)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -83,7 +83,7 @@ func TestAgora_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.ConstantResponseHttpClient(500, "{}")},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a agora secret %s within agora id %s but verified", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an agora secret %s within agora id %s but verified", secret, id)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -101,7 +101,7 @@ func TestAgora_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a agora secret %s within agora id %s but not valid ", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an agora secret %s within agora id %s but not valid ", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

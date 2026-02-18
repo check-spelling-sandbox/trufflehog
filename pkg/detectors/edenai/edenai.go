@@ -71,5 +71,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "EdenAI provides a unified API to access multiple AI engines. EdenAI API keys can be used to access and utilize these AI services."
+	return "EdenAI provides an unified API to access multiple AI engines. EdenAI API keys can be used to access and utilize these AI services."
 }

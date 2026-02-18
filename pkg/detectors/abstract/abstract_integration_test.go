@@ -44,7 +44,7 @@ func TestAbstract_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a abstract secret %s within but verified", secret)),
+				data:   []byte(fmt.Sprintf("You can find an abstract secret %s within but verified", secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestAbstract_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a abstract secret %s within but verified", secret)),
+				data:   []byte(fmt.Sprintf("You can find an abstract secret %s within but verified", secret)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -78,7 +78,7 @@ func TestAbstract_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.ConstantResponseHttpClient(500, "{}")},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a abstract secret %s within", secret)),
+				data:   []byte(fmt.Sprintf("You can find an abstract secret %s within", secret)),
 				verify: true,
 			},
 			want: func() []detectors.Result {
@@ -96,7 +96,7 @@ func TestAbstract_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a abstract secret %s within but not valid", inactiveSecret)),
+				data:   []byte(fmt.Sprintf("You can find an abstract secret %s within but not valid", inactiveSecret)),
 				verify: true,
 			},
 			want: []detectors.Result{

@@ -108,5 +108,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "ApiDeck is a platform that provides a unified API to connect multiple services. ApiDeck keys can be used to access and manage these services."
+	return "ApiDeck is a platform that provides an unified API to connect multiple services. ApiDeck keys can be used to access and manage these services."
 }

@@ -53,7 +53,7 @@ func NewCache[T any](cacheName string, opts ...Option[T]) (*Cache[T], error) {
 	}
 
 	var onEvicted func(string, T)
-	// Provide a evict callback function to record evictions if a custom metrics collector is provided.
+	// Provide an evict callback function to record evictions if a custom metrics collector is provided.
 	if sizedLRU.evictMetrics != nil {
 		onEvicted = func(string, T) {
 			sizedLRU.evictMetrics.RecordEviction(sizedLRU.cacheName)

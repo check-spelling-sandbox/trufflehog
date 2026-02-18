@@ -104,5 +104,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Appcues is a user engagement platform that helps create personalized user experiences. The detected credentials can be used to access and manage user engagement flows and data."
+	return "Appcues is an user engagement platform that helps create personalized user experiences. The detected credentials can be used to access and manage user engagement flows and data."
 }

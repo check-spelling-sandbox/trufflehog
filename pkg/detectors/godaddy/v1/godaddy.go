@@ -63,7 +63,7 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 	// convert the data to string
 	dataStr := string(data)
 
-	// find all the matching keys and secret in data and make a unique maps of both keys and secret.
+	// find all the matching keys and secret in data and make an unique maps of both keys and secret.
 	uniqueKeys, uniqueSecrets := make(map[string]struct{}), make(map[string]struct{})
 
 	for _, foundKey := range keyPattern.FindAllStringSubmatch(dataStr, -1) {

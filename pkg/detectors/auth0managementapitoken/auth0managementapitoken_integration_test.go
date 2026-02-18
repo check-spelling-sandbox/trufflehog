@@ -46,7 +46,7 @@ func TestAuth0ManagementApiToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 secret %s domain %s", managementApiToken, domain)),
+				data:   []byte(fmt.Sprintf("You can find an auth0 secret %s domain %s", managementApiToken, domain)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -64,7 +64,7 @@ func TestAuth0ManagementApiToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a auth0 secret %s domain https://%s/oauth/token within but not valid", inactiveManagementApiToken, domain)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an auth0 secret %s domain https://%s/oauth/token within but not valid", inactiveManagementApiToken, domain)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

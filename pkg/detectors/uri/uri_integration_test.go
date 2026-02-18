@@ -34,7 +34,7 @@ func TestURI_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uri secret %s within", "https://user:pass@httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
+				data:   []byte(fmt.Sprintf("You can find an uri secret %s within", "https://user:pass@httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -51,7 +51,7 @@ func TestURI_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
+				data:   []byte(fmt.Sprintf("You can find an uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -68,7 +68,7 @@ func TestURI_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?foo=bar")),
+				data:   []byte(fmt.Sprintf("You can find an uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx?foo=bar")),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -85,7 +85,7 @@ func TestURI_FromChunk(t *testing.T) {
 			s:    Scanner{client: common.SaneHttpClientTimeOut(1 * time.Microsecond)},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
+				data:   []byte(fmt.Sprintf("You can find an uri secret %s within", "https://httpwatch:pass@www.httpwatch.com/httpgallery/authentication/authenticatedimage/default.aspx")),
 				verify: true,
 			},
 			want: func() []detectors.Result {

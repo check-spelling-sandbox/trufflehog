@@ -105,5 +105,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Microsoft Teams Webhooks allow external services to communicate with Teams channels by sending messages to a unique URL."
+	return "Microsoft Teams Webhooks allow external services to communicate with Teams channels by sending messages to an unique URL."
 }

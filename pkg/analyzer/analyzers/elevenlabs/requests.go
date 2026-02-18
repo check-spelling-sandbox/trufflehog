@@ -554,7 +554,7 @@ func updateAudioNativeProject(client *http.Client, key string, secretInfo *Secre
 	}
 }
 
-// deleteInviteFromWorkspace try to remove a invite from workspace. The item must not exist.
+// deleteInviteFromWorkspace try to remove an invite from workspace. The item must not exist.
 func deleteInviteFromWorkspace(client *http.Client, key string, secretInfo *SecretInfo) error {
 	// send fake email in payload
 	payload := map[string]interface{}{

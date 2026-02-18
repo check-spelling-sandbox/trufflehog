@@ -117,7 +117,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			s:    scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -141,7 +141,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			s:    scanner{verificationClient: unverifiedSecretClient},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s but not valid", inactiveSecret, id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -206,7 +206,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			s:    scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s but not valid", hash, id)), // The secret would satisfy the regex but be filtered out after not passing validation.
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s but not valid", hash, id)), // The secret would satisfy the regex but be filtered out after not passing validation.
 				verify: true,
 			},
 			want:    nil,
@@ -243,7 +243,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s but not valid", "+HaNv9cTwheDKGJaws/+BMF2GgybQgBWdhcOOdfF", id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s but not valid", "+HaNv9cTwheDKGJaws/+BMF2GgybQgBWdhcOOdfF", id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -268,7 +268,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s but not valid", "+HaNv9cTwheDKGJaws/+BMF2GgybQgBWdhcOOdfF", id)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s but not valid", "+HaNv9cTwheDKGJaws/+BMF2GgybQgBWdhcOOdfF", id)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			wantErr: false,
@@ -280,7 +280,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -304,7 +304,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s", secret, id)),
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s", secret, id)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -326,7 +326,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			s:    scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s", inactiveSecret, canaryAccessKeyID)),
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s", inactiveSecret, canaryAccessKeyID)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -350,7 +350,7 @@ func TestAWS_FromChunk(t *testing.T) {
 			s:    scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a aws secret %s within aws %s", secret, canaryAccessKeyID)),
+				data:   []byte(fmt.Sprintf("You can find an aws secret %s within aws %s", secret, canaryAccessKeyID)),
 				verify: false,
 			},
 			want: []detectors.Result{

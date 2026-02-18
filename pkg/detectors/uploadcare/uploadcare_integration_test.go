@@ -44,7 +44,7 @@ func TestUploadCare_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uploadcare secret %s within uploadcare %s", secret, publicKey)),
+				data:   []byte(fmt.Sprintf("You can find an uploadcare secret %s within uploadcare %s", secret, publicKey)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -60,7 +60,7 @@ func TestUploadCare_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a uploadcare secret %s within uploadcare %s but not valid", inactiveSecret, publicKey)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an uploadcare secret %s within uploadcare %s but not valid", inactiveSecret, publicKey)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

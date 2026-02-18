@@ -72,7 +72,7 @@ func repositoriesToSecretInfo(username string, repos *RepositoriesResponse, secr
 
 	for _, repo := range repos.Result {
 		secretInfo.Repositories = append(secretInfo.Repositories, Repository{
-			// as repositories does not have a unique key, we make one by combining multiple fields
+			// as repositories does not have an unique key, we make one by combining multiple fields
 			ID:        fmt.Sprintf("%s/repo/%s/%s", username, repo.Type, repo.Name), // e.g: user123/repo/image/repo1
 			Name:      repo.Name,
 			Type:      repo.Type,

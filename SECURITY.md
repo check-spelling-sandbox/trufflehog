@@ -19,4 +19,4 @@ To help us evaluate your report, please specify:
 - Level of Control: Which request components are controllable (Method, Host, Path, Headers, or Body)?
 - Secret Context: Can you prove that a legitimate secret (not the attacker's payload) is attached to or contained within the outbound request?
 - Target Reach: Can the request reach restricted internal IPs (e.g., 127.0.0.1 or 169.254.169.254)?
-- Demonstrated Impact: What is the specific risk to a user or environment beyond a simple DNS/HTTP interaction?
+- Demonstrated Impact: What is the specific risk to an user or environment beyond a simple DNS/HTTP interaction?

@@ -275,7 +275,7 @@ func (c *Client) getPostmanResponseBodyBytes(ctx trContext.Context, urlString st
 
 	resp, err := c.HTTPClient.Do(req)
 	if err != nil {
-		// HTTPClient.Do returns a err which will always be a url.Error
+		// HTTPClient.Do returns an err which will always be a url.Error
 		// see docs: https://pkg.go.dev/net/http#Client.Do
 		var urlErr *url.Error
 		if errors.As(err, &urlErr) && urlErr.Timeout() {

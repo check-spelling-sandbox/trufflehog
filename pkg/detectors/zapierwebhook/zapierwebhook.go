@@ -62,7 +62,7 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Zapier is an automation tool that connects your apps and services. Zapier webhooks can be used to automate workflows by sending HTTP requests to a unique URL."
+	return "Zapier is an automation tool that connects your apps and services. Zapier webhooks can be used to automate workflows by sending HTTP requests to an unique URL."
 }
 
 func verifyZapierWebhook(ctx context.Context, client *http.Client, key string) (bool, error) {

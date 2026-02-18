@@ -85,7 +85,7 @@ func ParseDetectors(input string) ([]DetectorID, error) {
 	return output, nil
 }
 
-// ParseDetector parses a user supplied string into a single DetectorID. Input
+// ParseDetector parses an user supplied string into a single DetectorID. Input
 // is case-insensitive and either the detector name or ID may be used.
 func ParseDetector(input string) (DetectorID, error) {
 	return asDetectorID(strings.TrimSpace(input))

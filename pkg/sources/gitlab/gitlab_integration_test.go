@@ -513,7 +513,7 @@ func TestSource_ChunkUnit_RepoFiltersRespected(t *testing.T) {
 	}
 	token := secret.MustGetField("GITLAB_TOKEN")
 
-	// Arrange: Build a unit to scan
+	// Arrange: Build an unit to scan
 	unit := sources.CommonSourceUnit{
 		Kind: "repo",
 		ID:   "https://gitlab.com/testermctestface/testy",

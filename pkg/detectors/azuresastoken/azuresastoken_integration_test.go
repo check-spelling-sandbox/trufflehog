@@ -47,7 +47,7 @@ func TestAzureSasToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a azure sas url %s and token %s within", url, secret)),
+				data:   []byte(fmt.Sprintf("You can find an azure sas url %s and token %s within", url, secret)),
 				verify: true,
 			},
 			want: []detectors.Result{
@@ -64,7 +64,7 @@ func TestAzureSasToken_FromChunk(t *testing.T) {
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),
-				data:   []byte(fmt.Sprintf("You can find a azure sas url %s and token %s within but not valid", url, inactiveSecret)), // the secret would satisfy the regex but not pass validation
+				data:   []byte(fmt.Sprintf("You can find an azure sas url %s and token %s within but not valid", url, inactiveSecret)), // the secret would satisfy the regex but not pass validation
 				verify: true,
 			},
 			want: []detectors.Result{

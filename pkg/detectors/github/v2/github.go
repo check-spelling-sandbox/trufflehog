@@ -28,7 +28,7 @@ func (s Scanner) Version() int {
 func (Scanner) CloudEndpoint() string { return "https://api.github.com" }
 
 var (
-	// Oauth token
+	// OAuth token
 	// https://developer.github.com/v3/#oauth2-token-sent-in-a-header
 	// Token type list:
 	// https://github.blog/2021-04-05-behind-githubs-new-authentication-token-formats/

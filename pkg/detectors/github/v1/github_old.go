@@ -26,7 +26,7 @@ func (Scanner) Version() int          { return 1 }
 func (Scanner) CloudEndpoint() string { return "https://api.github.com" }
 
 var (
-	// Oauth token
+	// OAuth token
 	// https://developer.github.com/v3/#oauth2-token-sent-in-a-header
 	keyPat = regexp.MustCompile(
 		detectors.PrefixRegex([]string{

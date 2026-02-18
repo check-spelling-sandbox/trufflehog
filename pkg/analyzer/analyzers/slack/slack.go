@@ -155,7 +155,7 @@ func getSlackOAuthScopes(cfg *config.Config, key string) (scopes string, userDat
 	}
 
 	// Print all headers received from the server
-	scopes = resp.Header.Get("X-Oauth-Scopes")
+	scopes = resp.Header.Get("X-OAuth-Scopes")
 	return scopes, userData, err
 }
 

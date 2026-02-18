@@ -25,7 +25,7 @@ var (
 	defaultClient = detectors.DetectorHttpClientWithNoLocalAddresses
 	domainPat     = regexp.MustCompile(`\b[a-z0-9-]{1,40}\.okta(?:preview|-emea){0,1}\.com\b`)
 	tokenPat      = regexp.MustCompile(`\b00[a-zA-Z0-9_-]{40}\b`)
-	// TODO: Oauth client secrets
+	// TODO: OAuth client secrets
 )
 
 // Keywords are used for efficiently pre-filtering chunks.

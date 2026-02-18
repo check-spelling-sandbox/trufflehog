@@ -35,7 +35,7 @@ func (s Scanner) Keywords() []string {
 }
 
 func (s Scanner) Description() string {
-	return "Box is a service offering various service for secure collaboration, content management, and workflow. Box Oauth credentials can be used to access and interact with this data."
+	return "Box is a service offering various service for secure collaboration, content management, and workflow. Box OAuth credentials can be used to access and interact with this data."
 }
 
 // FromData will find and optionally verify Box secrets in a given set of bytes.

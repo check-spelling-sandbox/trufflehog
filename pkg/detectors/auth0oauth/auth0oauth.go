@@ -144,5 +144,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "Auth0 is a service designed to handle authentication and authorization for users. Oauth API keys can be used to impersonate applications and other things related to Auth0's API"
+	return "Auth0 is a service designed to handle authentication and authorization for users. OAuth API keys can be used to impersonate applications and other things related to Auth0's API"
 }

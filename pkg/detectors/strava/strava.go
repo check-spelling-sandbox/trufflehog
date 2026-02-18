@@ -86,5 +86,5 @@ func (s Scanner) Type() detectorspb.DetectorType {
 }
 
 func (s Scanner) Description() string {
-	return "An workout app, Oauth API keys can potentially be used to access user workout data"
+	return "An workout app, OAuth API keys can potentially be used to access user workout data"
 }

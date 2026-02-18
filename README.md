@@ -76,7 +76,7 @@ docker run --rm -it -v "$PWD:/pwd" trufflesecurity/trufflehog:latest github --or
 
 Several options are available for you:
 
-### MacOS users
+### macOS users
 
 ```bash
 brew install trufflehog

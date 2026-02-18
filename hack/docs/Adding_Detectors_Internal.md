@@ -111,7 +111,7 @@ Do not embed test credentials in the test code. Instead, use GCP Secrets Manager
 
 1. Access the latest secret version for modification.
 
-   Note: `/tmp/s` is a valid path on Linux. You will need to change that for Windows or OSX; otherwise, you will see an error. On Windows you will also need to install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install).
+   Note: `/tmp/s` is a valid path on Linux. You will need to change that for Windows or macOS; otherwise, you will see an error. On Windows you will also need to install [WSL](https://docs.microsoft.com/en-us/windows/wsl/install).
 
    ```bash
    gcloud secrets versions access --project trufflehog-testing --secret detectors5 latest > /tmp/s

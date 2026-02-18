@@ -40,7 +40,7 @@ import (
 const (
 	SourceType = sourcespb.SourceType_SOURCE_TYPE_GITHUB
 
-	unauthGithubOrgRateLimt = 30
+	unauthGithubOrgRateLimit = 30
 	defaultPagination       = 100
 	membersAppPagination    = 500
 )
@@ -545,7 +545,7 @@ func (s *Source) enumerateBasicAuth(ctx context.Context, reporter sources.UnitRe
 }
 
 func (s *Source) enumerateUnauthenticated(ctx context.Context, reporter sources.UnitReporter) {
-	if s.orgsCache.Count() > unauthGithubOrgRateLimt {
+	if s.orgsCache.Count() > unauthGithubOrgRateLimit {
 		ctx.Logger().Info("You may experience rate limiting when using the unauthenticated GitHub api. Consider using an authenticated scan instead.")
 	}
 

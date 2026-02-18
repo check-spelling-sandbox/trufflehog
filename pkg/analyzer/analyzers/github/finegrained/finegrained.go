@@ -299,7 +299,7 @@ func getCodespacesMetadataPermission(client *gh.Client, repo *gh.Repository, cur
 
 func getCodespacesSecretsPermission(client *gh.Client, repo *gh.Repository, currentAccess Permission) (Permission, error) {
 	// Risk: Extremely Low
-	// GET request to /repos/{owner}/{repo}/codespaces/secrets for non-existent secret
+	// GET request to /repos/{owner}/{repo}/codespaces/secrets for nonexistent secret
 	_, resp, err := client.Codespaces.GetRepoSecret(context.Background(), *repo.Owner.Login, *repo.Name, RANDOM_STRING)
 	switch resp.StatusCode {
 	case 403:

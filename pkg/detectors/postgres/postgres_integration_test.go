@@ -53,7 +53,7 @@ func TestPostgres_FromChunk(t *testing.T) {
 	// environment variable doesn't appear to work: The database created is always named 'postgres', no matter what
 	// POSTGRES_DB is set to. This means that we can't replicate a cluster that has no database named 'postgres', so we
 	// can't directly test what happens if we see one. To work around this, all the automated tests try to connect to
-	// the nonexistent database 'postgres2'. In this way, we test the logic of attempting to connect to a non-existent
+	// the nonexistent database 'postgres2'. In this way, we test the logic of attempting to connect to a nonexistent
 	// database, even though the test cases are the inverse of what we'd see in the wild.
 	type args struct {
 		ctx    context.Context

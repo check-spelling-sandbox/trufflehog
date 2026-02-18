@@ -83,14 +83,14 @@ func TestWithNoLocalIP(t *testing.T) {
 		assert.Error(t, err)
 	})
 
-	t.Run("Handles non-existent hostname", func(t *testing.T) {
+	t.Run("Handles nonexistent hostname", func(t *testing.T) {
 		client := &http.Client{}
 		WithNoLocalIP()(client)
 
 		transport, ok := client.Transport.(*http.Transport)
 		assert.True(t, ok, "Expected transport to be *http.Transport")
 
-		_, err := transport.DialContext(context.Background(), "tcp", "non-existent-host.local:80")
+		_, err := transport.DialContext(context.Background(), "tcp", "nonexistent-host.local:80")
 		assert.Error(t, err)
 	})
 }

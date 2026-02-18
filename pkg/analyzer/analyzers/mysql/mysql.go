@@ -541,7 +541,7 @@ func getGrants(db *sql.DB) ([]string, error) {
 // processGrants processes the grants and adds them to the databases structs and globalPrivs
 func processGrants(grants []string, databases map[string]*Database, globalPrivs *GlobalPrivs) {
 	for _, grant := range grants {
-		// GRANTs on non-existent databases are valid, but we need that object to exist in "databases" for processGrant().
+		// GRANTs on nonexistent databases are valid, but we need that object to exist in "databases" for processGrant().
 		db := parseDBFromGrant(grant)
 		if db == mysql_all {
 			continue

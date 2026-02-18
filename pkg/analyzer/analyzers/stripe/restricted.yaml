@@ -282,7 +282,7 @@ categories:
         Invalid:
         - 403
         Docs: https://docs.stripe.com/api/issuing/funding_instructions/list
-        Note: On 403, it mistakently says "rak_topup_read"
+        Note: On 403, it mistakenly says "rak_topup_read"
       Write:
         Scope: ''
         Endpoint: https://api.stripe.com/v1/issuing/funding_instructions

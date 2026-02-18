@@ -291,7 +291,7 @@ trufflehog docker --image my-registry.io/private-app:v1.0.0
 | Scan remote image on Quay.io | ✅ Success | `--image quay.io/prometheus/prometheus` | https://quay.io/search | Public Quay.io registry supported |
 | Scan multiple images | ✅ Success | `--image <image_name> --image <image_name>` | Multiple registries | Sequential scanning of multiple images |
 | Scan remote image on DockerHub with token | ✅ Success | `--token <token>`(Generate token using username and password) | https://hub.docker.com/ | Authenticated scanning for private repos |
-| Scan private image on Quay | ⏸️ Halted | N/A | https://quay.io/ | RedHat requires paid account for private repos |
+| Scan private image on Quay | ⏸️ Halted | N/A | https://quay.io/ | Red Hat requires paid account for private repos |
 | Scan private image on GHCR | ✅ Success | `--image ghcr.io/<image_name>` | https://github.com/packages | GitHub Container Registry |
 
 ## Troubleshooting

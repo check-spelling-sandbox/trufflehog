@@ -209,7 +209,7 @@ func printAccountsAndProducts(info *secretInfo) {
 				permissionLevel := PermissionStrings[product.PermissionLevel]
 				productPermissionCell = "Granted" // If permission level is not defined, default to "Granted"
 				if len(permissionLevel) > 0 {
-					// Capitalize the perssion level string
+					// Capitalize the permission level string
 					capitalizedLevel := strings.ToUpper(string(permissionLevel[0])) + strings.ToLower(permissionLevel[1:])
 					productPermissionCell = color.GreenString(capitalizedLevel)
 				}

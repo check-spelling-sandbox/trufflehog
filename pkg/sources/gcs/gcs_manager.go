@@ -306,11 +306,11 @@ func withMaxObjectSize(maxObjectSize int64) gcsManagerOption {
 // This is used to resume listing objects for a bucket.
 func withBucketOffsets(offsets map[string]offsetInfo) gcsManagerOption {
 	bkts := make(map[string]bucket, len(offsets))
-	for bkt, offst := range offsets {
+	for bkt, offset := range offsets {
 		bkts[bkt] = bucket{
-			shouldInclude: !offst.isBucketProcessed,
+			shouldInclude: !offset.isBucketProcessed,
 			name:          bkt,
-			startOffset:   offst.lastProcessedObject,
+			startOffset:   offset.lastProcessedObject,
 		}
 	}
 	return func(m *gcsManager) error {

@@ -38,7 +38,7 @@ func TestJiraToken_Pattern(t *testing.T) {
 								"issuetype": {
 								"self": "https://example.atlassian.net/rest/api/2/issuetype/09090",
 								"id": "09090",
-								"description": "This is an example ticket. Here's the token to test JIRA APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
+								"description": "This is an example ticket. Here's the token to test Jira APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
 								"name": "Example Pattern test",
 								"subtask": false,
 								"avatarId": 1298,
@@ -67,7 +67,7 @@ func TestJiraToken_Pattern(t *testing.T) {
 								"statuscategorychangedate": "2016-06-01T01:25:35.807-0700",
 								"issuetype": {
 								"id": "09090",
-								"description": "This is an example ticket. Here's the token to test JIRA APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
+								"description": "This is an example ticket. Here's the token to test Jira APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
 								"name": "Example Pattern test 2",
 								"subtask": false,
 								"avatarId": 1298,
@@ -127,7 +127,7 @@ func TestJiraToken_Pattern(t *testing.T) {
 								"issuetype": {
 								"id": "09090",
 								"self": "https://example.atlassian.net/rest/api/2/issuetype/09090",
-								"description": "This is an example ticket. Here's the token to test JIRA APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
+								"description": "This is an example ticket. Here's the token to test Jira APIs: ATATThktLkSzzcXi1xt19IlU6gAchV1TS83w11YOqAXqFUeA2=Yx3ssoNC",
 								"name": "Example Pattern test 2",
 								"subtask": false,
 								"avatarId": 1298,
@@ -186,7 +186,7 @@ func TestJiraToken_Pattern(t *testing.T) {
 								"statuscategorychangedate": "2016-06-01T01:25:35.807-0700",
 								"issuetype": {
 								"id": "09090",
-								"description": "This is an example ticket. Here's the token to test JIRA APIs: ATATTA9nsCA?a7812Z7VoI%YJ0K4rFWLBfk91rhOsLAW=Yx3ssoNC",
+								"description": "This is an example ticket. Here's the token to test Jira APIs: ATATTA9nsCA?a7812Z7VoI%YJ0K4rFWLBfk91rhOsLAW=Yx3ssoNC",
 								"name": "Example Pattern test 2",
 								"subtask": false,
 								"avatarId": 1298,

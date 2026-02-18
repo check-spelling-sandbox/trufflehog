@@ -170,7 +170,7 @@ func VerifyJiraToken(ctx context.Context, client *http.Client, email, domain, to
 	case http.StatusOK:
 		var jiraResp JIRAGraphQLResponse
 		if err := json.NewDecoder(resp.Body).Decode(&jiraResp); err != nil {
-			return false, nil // can't decode response in case of 200 OK = not valid JIRA domain
+			return false, nil // can't decode response in case of 200 OK = not valid Jira domain
 		}
 
 		return true, nil

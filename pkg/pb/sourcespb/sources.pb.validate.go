@@ -3577,14 +3577,14 @@ var _ interface {
 	ErrorName() string
 } = HuggingfaceValidationError{}
 
-// Validate checks the field values on JIRA with the rules defined in the proto
+// Validate checks the field values on Jira with the rules defined in the proto
 // definition for this message. If any rules are violated, the first error
 // encountered is returned, or nil if there are no violations.
 func (m *JIRA) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on JIRA with the rules defined in the
+// ValidateAll checks the field values on Jira with the rules defined in the
 // proto definition for this message. If any rules are violated, the result is
 // a list of violation errors wrapped in JIRAMultiError, or nil if none found.
 func (m *JIRA) ValidateAll() error {

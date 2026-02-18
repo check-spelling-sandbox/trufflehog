@@ -50,7 +50,7 @@ var _ detectors.Detector = (*Scanner)(nil)
 var _ detectors.CustomFalsePositiveChecker = (*Scanner)(nil)
 
 var (
-	// Matches typical JDBC connection strings amd ingores any special character at the end
+	// Matches typical JDBC connection strings amd ignores any special character at the end
 	keyPat = regexp.MustCompile(`(?i)jdbc:[\w]{3,10}:[^\s"'<>,{}[\]]{10,511}[A-Za-z0-9]`)
 )
 

@@ -139,7 +139,7 @@ enum DetectorType {
   AirbrakeProjectKey = 125;
   AirbrakeUserKey = 126;
   PendoIntegrationKey = 127; // Not yet implemented
-  SplunkOberservabilityToken = 128;
+  SplunkObservabilityToken = 128;
   LokaliseToken = 129;
   Calendarific = 130;
   Jumpcloud = 131;

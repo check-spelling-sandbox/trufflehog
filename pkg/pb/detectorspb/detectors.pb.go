@@ -206,7 +206,7 @@ const (
 	DetectorType_AirbrakeProjectKey            DetectorType = 125
 	DetectorType_AirbrakeUserKey               DetectorType = 126
 	DetectorType_PendoIntegrationKey           DetectorType = 127 // Not yet implemented
-	DetectorType_SplunkOberservabilityToken    DetectorType = 128
+	DetectorType_SplunkObservabilityToken    DetectorType = 128
 	DetectorType_LokaliseToken                 DetectorType = 129
 	DetectorType_Calendarific                  DetectorType = 130
 	DetectorType_Jumpcloud                     DetectorType = 131
@@ -1278,7 +1278,7 @@ var (
 		125:  "AirbrakeProjectKey",
 		126:  "AirbrakeUserKey",
 		127:  "PendoIntegrationKey",
-		128:  "SplunkOberservabilityToken",
+		128:  "SplunkObservabilityToken",
 		129:  "LokaliseToken",
 		130:  "Calendarific",
 		131:  "Jumpcloud",
@@ -2317,7 +2317,7 @@ var (
 		"AirbrakeProjectKey":                    125,
 		"AirbrakeUserKey":                       126,
 		"PendoIntegrationKey":                   127,
-		"SplunkOberservabilityToken":            128,
+		"SplunkObservabilityToken":            128,
 		"LokaliseToken":                         129,
 		"Calendarific":                          130,
 		"Jumpcloud":                             131,

@@ -40,7 +40,7 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 		resMatch := strings.TrimSpace(match[1])
 
 		s1 := detectors.Result{
-			DetectorType: detectorspb.DetectorType_SplunkOberservabilityToken,
+			DetectorType: detectorspb.DetectorType_SplunkObservabilityToken,
 			Raw:          []byte(resMatch),
 		}
 
@@ -67,7 +67,7 @@ func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (result
 }
 
 func (s Scanner) Type() detectorspb.DetectorType {
-	return detectorspb.DetectorType_SplunkOberservabilityToken
+	return detectorspb.DetectorType_SplunkObservabilityToken
 }
 
 func (s Scanner) Description() string {

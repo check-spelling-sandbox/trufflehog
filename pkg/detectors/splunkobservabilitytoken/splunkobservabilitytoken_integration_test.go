@@ -48,7 +48,7 @@ func TestSplunkObservabilityToken_FromChunk(t *testing.T) {
 			},
 			want: []detectors.Result{
 				{
-					DetectorType: detectorspb.DetectorType_SplunkOberservabilityToken,
+					DetectorType: detectorspb.DetectorType_SplunkObservabilityToken,
 					Verified:     true,
 				},
 			},
@@ -64,7 +64,7 @@ func TestSplunkObservabilityToken_FromChunk(t *testing.T) {
 			},
 			want: []detectors.Result{
 				{
-					DetectorType: detectorspb.DetectorType_SplunkOberservabilityToken,
+					DetectorType: detectorspb.DetectorType_SplunkObservabilityToken,
 					Verified:     false,
 				},
 			},

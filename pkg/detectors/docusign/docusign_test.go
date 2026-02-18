@@ -35,7 +35,7 @@ var (
 	secret = "03f36108-730e-9061-ad3f-b77c910b2559212904c1-60fc-09b2-d615-1849cd748bf4"
 )
 
-func TestDocsign_Pattern(t *testing.T) {
+func TestDocusign_Pattern(t *testing.T) {
 	d := Scanner{}
 	ahoCorasickCore := ahocorasick.NewAhoCorasickCore([]detectors.Detector{d})
 

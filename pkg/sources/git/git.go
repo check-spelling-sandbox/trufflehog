@@ -610,7 +610,7 @@ func PingRepoUsingToken(ctx context.Context, token, gitUrl, user string) error {
 		lsUrl.User = url.UserPassword(user, token)
 	}
 
-	// We don't actually care about any refs on the remote, we just care whether can can list them at all. So we query
+	// We don't actually care about any refs on the remote, we just care whether can list them at all. So we query
 	// only for a ref that we know won't exist to minimize the search time on the remote. (By default, ls-remote exits
 	// with 0 even if it doesn't find any matching refs.)
 	fakeRef := "TRUFFLEHOG_CHECK_GIT_REMOTE_URL_REACHABILITY"

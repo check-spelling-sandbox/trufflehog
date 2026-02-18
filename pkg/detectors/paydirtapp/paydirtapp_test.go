@@ -17,7 +17,7 @@ var (
 	keyword        = "paydirtapp"
 )
 
-func TestPaydirtyapp_Pattern(t *testing.T) {
+func TestPaydirtapp_Pattern(t *testing.T) {
 	d := Scanner{}
 	ahoCorasickCore := ahocorasick.NewAhoCorasickCore([]detectors.Detector{d})
 	tests := []struct {

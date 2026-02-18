@@ -16,7 +16,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/pb/detectorspb"
 )
 
-func TestPaydirtyapp_FromChunk(t *testing.T) {
+func TestPaydirtapp_FromChunk(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()
 	testSecrets, err := common.GetSecret(ctx, "trufflehog-testing", "detectors3")
@@ -87,7 +87,7 @@ func TestPaydirtyapp_FromChunk(t *testing.T) {
 			s := Scanner{}
 			got, err := s.FromData(tt.args.ctx, tt.args.verify, tt.args.data)
 			if (err != nil) != tt.wantErr {
-				t.Errorf("Paydirtyapp.FromData() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("Paydirtapp.FromData() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 			for i := range got {
@@ -97,7 +97,7 @@ func TestPaydirtyapp_FromChunk(t *testing.T) {
 				got[i].Raw = nil
 			}
 			if diff := pretty.Compare(got, tt.want); diff != "" {
-				t.Errorf("Paydirtyapp.FromData() %s diff: (-got +want)\n%s", tt.name, diff)
+				t.Errorf("Paydirtapp.FromData() %s diff: (-got +want)\n%s", tt.name, diff)
 			}
 		})
 	}

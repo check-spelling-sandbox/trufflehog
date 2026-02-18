@@ -171,7 +171,7 @@ func secretInfoToAnalyzerResult(info *SecretInfo) *analyzers.AnalyzerResult {
 
 	// extract information from resource to create bindings and append to result bindings
 	for _, resource := range info.ElevenLabsResources {
-		// if resource has permission it is binded resource
+		// if resource has permission it is bound resource
 		if resource.Permission != "" {
 			binding := analyzers.Binding{
 				Resource: analyzers.Resource{

@@ -693,7 +693,7 @@ func getAgents(client *http.Client, key string, secretInfo *SecretInfo) error {
 				ID:         agent.ID,
 				Name:       agent.Name,
 				Type:       "Agent",
-				Permission: "", // not binded with any permission
+				Permission: "", // not bound with any permission
 				Metadata: map[string]string{
 					"access level": agent.AccessLevel,
 				},
@@ -733,7 +733,7 @@ func getConversation(client *http.Client, key, agentID string, secretInfo *Secre
 				ID:         conversation.ID,
 				Name:       "", // no name
 				Type:       "Conversation",
-				Permission: "", // not binded with any permission
+				Permission: "", // not bound with any permission
 				Metadata: map[string]string{
 					"status": conversation.Status,
 				},

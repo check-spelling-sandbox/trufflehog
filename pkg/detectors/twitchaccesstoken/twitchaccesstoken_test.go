@@ -38,7 +38,7 @@ func TestTwitchaccesstoken_Pattern(t *testing.T) {
 			want:  []string{"z9y8x7w6v5u4t3s2r1q0p9o8n7m6l5", "123abc456def789ghi012jkl345mno"},
 		},
 		{
-			name:  "invald pattern",
+			name:  "invalid pattern",
 			input: "twitchaccesstoken_token = '1a2b3c4d'",
 			want:  []string{},
 		},

@@ -80,7 +80,7 @@ Note: Be sure to update the tests to reference the new secret values in GSM, or 
    The Secret Detector can be completed with these general steps:
 
    1. Update the pattern regex and keywords. Try iterating with [regex101.com](http://regex101.com/).
-   2. Update the verifier code to use a non-destructive API call that can determine whether the secret is valid or not.
+   2. Update the verifier code to use a non-destructive API call that can determine whether or not the secret is valid.
       * Make sure you understand [verification indeterminacy](#verification-indeterminacy).
    3. Create a [test for the detector](#testing-the-detector).
    4. Add your new detector to DefaultDetectors in `/pkg/engine/defaults/defaults.go`.

@@ -78,7 +78,7 @@ Note: Be sure to update the tests to reference the new secret values in GSM, or 
 
    1. Add the test secret to GCP Secrets. See [managing test secrets](#managing-test-secrets)
    2. Update the pattern regex and keywords. Try iterating with [regex101.com](http://regex101.com/).
-   3. Update the verifier code to use a non-destructive API call that can determine whether the secret is valid or not.
+   3. Update the verifier code to use a non-destructive API call that can determine whether or not the secret is valid.
       * Make sure you understand [verification indeterminacy](#verification-indeterminacy).
    4. Update the tests with these test cases at minimum:
       1. Found and verified (using a credential loaded from GCP Secrets)

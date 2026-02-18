@@ -699,7 +699,7 @@ your custom detector has multiple `regex` set (in this example `hogID`, and `hog
 ## Generic JWT Detection
 
 TruffleHog supports detection and verification of a subset of generic JWTs it finds.
-Specifically, if a JWT uses public-key cryptography rather than HMAC and the public key can be obtained, TruffleHog can determine whether the JWT is live or not.
+Specifically, if a JWT uses public-key cryptography rather than HMAC and the public key can be obtained, TruffleHog can determine whether or not the JWT is live.
 
 ## :mag: Analyze
 

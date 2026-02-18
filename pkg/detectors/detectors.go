@@ -98,7 +98,7 @@ type Result struct {
 	DetectorType detectorspb.DetectorType
 	// DetectorName is the name of the Detector. Used for custom detectors.
 	DetectorName string
-	// Verified indicates whether the result was verified or not.
+	// Verified indicates whether or not the result was verified.
 	Verified bool
 	// VerificationFromCache indicates whether this result's verification result came from the verification cache rather
 	// than an actual remote request.

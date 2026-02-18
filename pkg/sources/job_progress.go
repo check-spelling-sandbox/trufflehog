@@ -108,7 +108,7 @@ type JobProgress struct {
 	JobID      JobID
 	SourceID   SourceID
 	SourceName string
-	// Tracks whether the job is finished or not.
+	// Tracks whether or not the job is finished.
 	ctx    context.Context
 	cancel context.CancelFunc
 	// Requests to cancel the job.

@@ -698,7 +698,7 @@ func (s *Source) scan(ctx context.Context, reporter sources.ChunkReporter) error
 
 // scanRepo attempts to scan the provided URL and any associated wiki and
 // comments if configured. An error is returned if we could not find necessary
-// repository metadata or clone the repo, otherwise all errors are reported to
+// repository metadata or clone the repo; otherwise, all errors are reported to
 // the ChunkReporter.
 func (s *Source) scanRepo(ctx context.Context, repoURL string, reporter sources.ChunkReporter) error {
 	if !strings.HasSuffix(repoURL, ".git") {

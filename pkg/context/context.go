@@ -169,7 +169,7 @@ func WithLogger(parent context.Context, logger logr.Logger) Context {
 }
 
 // AddLogger converts a context.Context into a Context. If the underlying type
-// is already a Context, that will be returned, otherwise a default logger will
+// is already a Context, that will be returned; otherwise, a default logger will
 // be added.
 func AddLogger(parent context.Context) Context {
 	// If the context.Context is already a Context, return that.

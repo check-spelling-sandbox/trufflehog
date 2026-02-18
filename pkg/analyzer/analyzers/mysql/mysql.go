@@ -382,7 +382,7 @@ func fixTLSQueryParam(connection string) (string, error) {
 	// Parse connection string on "?"
 	parsed := strings.Split(connection, "?")
 
-	// Check if has query parms
+	// Check if has query params
 	if len(parsed) < 2 {
 		// Add 10s timeout
 		connection += "?timeout=10s"
@@ -391,7 +391,7 @@ func fixTLSQueryParam(connection string) (string, error) {
 
 	var error error
 
-	// Split parms
+	// Split params
 	querySlice := strings.Split(parsed[1], "&")
 
 	// Check if ssl-mode is present

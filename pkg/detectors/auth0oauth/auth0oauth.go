@@ -132,7 +132,7 @@ func verifyTuple(ctx context.Context, client *http.Client, domainRes, clientId, 
 		}
 		return false, nil
 	case http.StatusNotFound:
-		// domain does not exists - 404 not found
+		// domain does not exist - 404 not found
 		return false, nil
 	default:
 		return false, fmt.Errorf("unexpected HTTP response status %d", resp.StatusCode)

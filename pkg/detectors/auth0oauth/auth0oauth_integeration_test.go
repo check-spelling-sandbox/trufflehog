@@ -110,7 +110,7 @@ func TestAuth0oauth_FromChunk(t *testing.T) {
 			wantErr: false,
 		},
 		{
-			name: "domain does not exists",
+			name: "domain does not exist",
 			s:    Scanner{},
 			args: args{
 				ctx:    context.Background(),

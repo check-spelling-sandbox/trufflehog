@@ -78,7 +78,7 @@ func New(c common.Common) *SourceSelect {
 		// Enterprise sources.
 		EnterpriseItem("Artifactory", "Scan JFrog Artifactory packages."),
 		EnterpriseItem("Azure Repos", "Scan Microsoft Azure repositories."),
-		EnterpriseItem("BitBucket", "Scan Atlassian's Git-based source code repository hosting service."),
+		EnterpriseItem("Bitbucket", "Scan Atlassian's Git-based source code repository hosting service."),
 		EnterpriseItem("Buildkite", "Scan Buildkite, a CI/CD platform."),
 		EnterpriseItem("Confluence", "Scan Atlassian's web-based wiki and knowledge base."),
 		EnterpriseItem("Gerrit", "Scan Gerrit, a code collaboration tool"),

@@ -83,7 +83,7 @@ func Test_NormalizeGitlabRepo(t *testing.T) {
 		Err  error
 	}{
 		"good":                    {Repo: "https://gitlab.com/org/repo", Out: "https://gitlab.com/org/repo.git", Err: nil},
-		"gitlab needs http/https": {Repo: "git@gitlab.com:org/repo.git:", Out: "", Err: errors.New("Gitlab requires http/https repo urls: e.g. https://gitlab.com/org/repo.git")},
+		"gitlab needs http/https": {Repo: "git@gitlab.com:org/repo.git:", Out: "", Err: errors.New("GitLab requires http/https repo urls: e.g. https://gitlab.com/org/repo.git")},
 	}
 
 	for name, tt := range tests {

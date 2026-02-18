@@ -20,7 +20,7 @@ var (
 		Namespace: common.MetricsNamespace,
 		Subsystem: common.MetricsSubsystem,
 		Name:      "gitlab_repos_enumerated",
-		Help:      "Total number of Gitlab repositories enumerated.",
+		Help:      "Total number of GitLab repositories enumerated.",
 	},
 		[]string{"source_name"})
 
@@ -28,7 +28,7 @@ var (
 		Namespace: common.MetricsNamespace,
 		Subsystem: common.MetricsSubsystem,
 		Name:      "gitlab_repos_scanned",
-		Help:      "Total number of Gitlab repositories scanned.",
+		Help:      "Total number of GitLab repositories scanned.",
 	},
 		[]string{"source_name"})
 )

@@ -284,7 +284,7 @@ func TestSupportsLineNumbers(t *testing.T) {
 	}{
 		{"Git source", sourcespb.SourceType_SOURCE_TYPE_GIT, true},
 		{"GitHub source", sourcespb.SourceType_SOURCE_TYPE_GITHUB, true},
-		{"Gitlab source", sourcespb.SourceType_SOURCE_TYPE_GITLAB, true},
+		{"GitLab source", sourcespb.SourceType_SOURCE_TYPE_GITLAB, true},
 		{"Bitbucket source", sourcespb.SourceType_SOURCE_TYPE_BITBUCKET, true},
 		{"Gerrit source", sourcespb.SourceType_SOURCE_TYPE_GERRIT, true},
 		{"GitHub unauthenticated org source", sourcespb.SourceType_SOURCE_TYPE_GITHUB_UNAUTHENTICATED_ORG, true},
@@ -994,7 +994,7 @@ func TestSetLink(t *testing.T) {
 			wantLink: "https://github.com/example#L42",
 		},
 		{
-			name: "Gitlab link set",
+			name: "GitLab link set",
 			input: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Gitlab{
 					Gitlab: &source_metadatapb.Gitlab{},

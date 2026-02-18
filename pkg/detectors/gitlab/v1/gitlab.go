@@ -61,7 +61,7 @@ func (s Scanner) Description() string {
 	return "GitLab is a web-based DevOps lifecycle tool that provides a Git repository manager providing wiki, issue-tracking, and CI/CD pipeline features. GitLab API tokens can be used to access and modify repository data and other resources."
 }
 
-// FromData will find and optionally verify Gitlab secrets in a given set of bytes.
+// FromData will find and optionally verify GitLab secrets in a given set of bytes.
 func (s Scanner) FromData(ctx context.Context, verify bool, data []byte) (results []detectors.Result, err error) {
 	dataStr := string(data)
 

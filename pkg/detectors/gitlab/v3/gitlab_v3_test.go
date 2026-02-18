@@ -25,7 +25,7 @@ func TestGitLab_Pattern(t *testing.T) {
 			name: "valid pattern",
 			input: `[{
 					"_id": "1a8d0cca-e1a9-4318-bc2f-f5658ab2dcb5",
-					"name": "Gitlab",
+					"name": "GitLab",
 					"type": "Detector",
 					"api": true,
 					"authentication_type": "",

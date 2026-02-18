@@ -31,8 +31,8 @@ func TestEmailRegexCheck(t *testing.T) {
 		dot email          = test.email@my-email-service.xyz
 		special char email = special@characters.com
 		support email      = support@customer-service.org
-		insenstive email   = ADMIN@example.com
-		insenstive domain  = ADMIN@COMPANY.COM
+		insensitive email  = ADMIN@example.com
+		insensitive domain = ADMIN@COMPANY.COM
 		mix email          = USER123xyz@local-Server.local
 
 		// negative cases

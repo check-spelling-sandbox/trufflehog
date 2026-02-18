@@ -538,7 +538,7 @@ func printOrgPermissions(tokenJSON HFTokenJSON) {
 	t.Render()
 }
 
-// printOrgs prints the organizations the user is a member of
+// printOrgs prints the organizations in which the user is a member
 func printOrgs(tokenJSON HFTokenJSON) {
 	color.Green("\n[i] Organizations:")
 

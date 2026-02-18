@@ -73,7 +73,7 @@ func EncodeResumeInfo(resumeInfoSlice []string) string {
 
 func DecodeResumeInfo(resumeInfo string) []string {
 	// strings.Split will, for an empty string, return []string{""},
-	// which is an element, where as when there is no resume info we want an empty slice.
+	// which is an element, whereas when there is no resume info we want an empty slice.
 	if resumeInfo == "" {
 		return nil
 	}

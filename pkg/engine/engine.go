@@ -971,7 +971,7 @@ func (e *Engine) verificationOverlapWorker(ctx context.Context) {
 						val = res.Raw
 					}
 
-					// Use levenstein distance to determine if the secret is likely the same.
+					// Use levenshtein distance to determine if the secret is likely the same.
 					// Ex:
 					// - postman api key: PMAK-qnwfsLyRSyfCwfpHaQP1UzDhrgpWvHjbYzjpRCMshjt417zWcrzyHUArs7r
 					// - malicious detector "api key": qnwfsLyRSyfCwfpHaQP1UzDhrgpWvHjbYzjpRCMshjt417zWcrzyHUArs7r

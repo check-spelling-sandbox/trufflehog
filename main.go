@@ -1151,7 +1151,7 @@ func runSingleScan(ctx context.Context, cmd string, cfg engine.Config) (metrics,
 
 // parseResults ensures that users provide valid CSV input to `--results`.
 //
-// This is a work-around to kingpin not supporting CSVs.
+// This is a workaround to kingpin not supporting CSVs.
 // See: https://github.com/trufflesecurity/trufflehog/pull/2372#issuecomment-1983868917
 func parseResults(input *string) (map[string]struct{}, error) {
 	if *input == "" {

@@ -694,7 +694,7 @@ your custom detector has multiple `regex` set (in this example `hogID`, and `hog
 **NB:** This feature is alpha and subject to change.
 
 ### Regex Detector Example
-[Here](/pkg/custom_detectors/CUSTOM_DETECTORS.md) is how to setup a custom regex detector with verification server.
+[TruffleHog Custom Detector Setup Guide](/pkg/custom_detectors/CUSTOM_DETECTORS.md) is how to setup a custom regex detector with verification server.
 
 ## Generic JWT Detection
 

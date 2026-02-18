@@ -303,12 +303,12 @@ func TestContainsUppercase(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "contains upper case",
+			name: "contains uppercase",
 			args: args{s: "G1sKkJeKlSQf"},
 			want: true,
 		},
 		{
-			name: "does not contains upper case",
+			name: "does not contains uppercase",
 			args: args{s: "pq6-14ydz1@d"},
 			want: false,
 		},
@@ -332,12 +332,12 @@ func TestContainsSpecialChar(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "contains upper case",
+			name: "contains uppercase",
 			args: args{s: "HP$gE7s=do0B"},
 			want: true,
 		},
 		{
-			name: "does not contains upper case",
+			name: "does not contains uppercase",
 			args: args{s: "w9gvBYctrSjB"},
 			want: false,
 		},

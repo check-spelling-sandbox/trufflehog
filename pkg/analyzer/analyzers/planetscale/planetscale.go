@@ -286,7 +286,7 @@ func AnalyzePermissions(cfg *config.Config, id, token string) (*SecretInfo, erro
 	}
 	info.DBPermissions = dbPermissions
 
-	// These are permissions that can not be verified,
+	// These are permissions that cannot be verified,
 	// either due to no endpoint available that specifically requires the permission
 	// or there does not exist a way to verify these permissions without changing the state of the system (mostly DELETE permissions)
 	info.UnverifiedPermissions = []string{

@@ -219,7 +219,7 @@ func (br *BufferedReadSeeker) Seek(offset int64, whence int) (int64, error) {
 	}
 
 	if newIndex < 0 {
-		return 0, errors.New("can not seek to before start of reader")
+		return 0, errors.New("cannot seek to before start of reader")
 	}
 
 	// For non-seekable readers, we need to ensure we've read up to the new index.

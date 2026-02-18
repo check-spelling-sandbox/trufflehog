@@ -158,7 +158,7 @@ func determineScope(token string, perm common.Permission, requiredIDs map[string
 		return false, nil
 	}
 
-	// Can not determine scope as the expected error is unknown
+	// Cannot determine scope as the expected error is unknown
 	return false, nil
 }
 

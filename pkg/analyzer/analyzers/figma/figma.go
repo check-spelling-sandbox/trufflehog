@@ -129,7 +129,7 @@ func determineScopeStatus(statusCode int, endpoint endpoint) ScopeStatus {
 		return StatusDenied
 	}
 
-	// Can not determine scope as the expected error is unknown
+	// Cannot determine scope as the expected error is unknown
 	return StatusUnverified
 }
 

@@ -61,7 +61,7 @@ func convertToLegacyJSON(r *detectors.ResultWithMetadata, repoPath string) (*Leg
 	case sourcespb.SourceType_SOURCE_TYPE_GITLAB:
 		source = r.SourceMetadata.GetGitlab()
 	default:
-		return nil, fmt.Errorf("legacy JSON output can not be used with this source: %s", r.SourceName)
+		return nil, fmt.Errorf("legacy JSON output cannot be used with this source: %s", r.SourceName)
 	}
 
 	options := &gogit.PlainOpenOptions{

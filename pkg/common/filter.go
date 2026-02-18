@@ -85,7 +85,7 @@ func FilterRulesFromFile(source string) (*FilterRuleSet, error) {
 		}
 		pattern, err := regexp.Compile(line)
 		if err != nil {
-			return nil, fmt.Errorf("can not compile regular expression: %s", line)
+			return nil, fmt.Errorf("cannot compile regular expression: %s", line)
 		}
 		rules = append(rules, *pattern)
 	}

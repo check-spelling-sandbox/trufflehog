@@ -54,7 +54,7 @@ func decodeTokenToSecretInfo(jwtToken string, secretInfo *SecretInfo) error {
 			Email:    claims.HubClaims.Email,
 		}
 
-		secretInfo.ExpiresIn = humandReadableTime(claims.ExpiresIn)
+		secretInfo.ExpiresIn = humanReadableTime(claims.ExpiresIn)
 
 		secretInfo.Permissions = append(secretInfo.Permissions, claims.Scope)
 		secretInfo.Valid = true
@@ -136,8 +136,8 @@ func assignHighestPermission(permissions []string) string {
 
 }
 
-// humandReadableTime converts seconds to days, hours, minutes, or seconds based on the value
-func humandReadableTime(seconds int) string {
+// humanReadableTime converts seconds to days, hours, minutes, or seconds based on the value
+func humanReadableTime(seconds int) string {
 	// Convert Unix timestamp to time.Time object
 	t := time.Unix(int64(seconds), 0)
 

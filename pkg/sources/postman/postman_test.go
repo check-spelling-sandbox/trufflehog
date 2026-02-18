@@ -729,7 +729,7 @@ func TestSource_BadPostmanWorkspaceApiResponseDoesntEndScan(t *testing.T) {
 		JSON(map[string]interface{}{
 			"error": map[string]interface{}{
 				"name":       "workspaceNotFoundError",
-				"mesage":     "workspace not found",
+				"message":    "workspace not found",
 				"statusCode": 404,
 			},
 		})

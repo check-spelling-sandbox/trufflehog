@@ -114,9 +114,9 @@ var (
 	githubScanToken             = githubScan.Flag("token", "GitHub token. Can be provided with environment variable GITHUB_TOKEN.").Envar("GITHUB_TOKEN").String()
 	githubIncludeForks          = githubScan.Flag("include-forks", "Include forks in scan.").Bool()
 	githubIncludeMembers        = githubScan.Flag("include-members", "Include organization member repositories in scan.").Bool()
-	githubIncludeRepos          = githubScan.Flag("include-repos", `Repositories to include in an org scan. This can also be a glob pattern. You can repeat this flag. Must use Github repo full name. Example: "trufflesecurity/trufflehog", "trufflesecurity/t*"`).Strings()
+	githubIncludeRepos          = githubScan.Flag("include-repos", `Repositories to include in an org scan. This can also be a glob pattern. You can repeat this flag. Must use GitHub repo full name. Example: "trufflesecurity/trufflehog", "trufflesecurity/t*"`).Strings()
 	githubIncludeWikis          = githubScan.Flag("include-wikis", "Include repository wikisin scan.").Bool()
-	githubExcludeRepos          = githubScan.Flag("exclude-repos", `Repositories to exclude in an org scan. This can also be a glob pattern. You can repeat this flag. Must use Github repo full name. Example: "trufflesecurity/driftwood", "trufflesecurity/d*"`).Strings()
+	githubExcludeRepos          = githubScan.Flag("exclude-repos", `Repositories to exclude in an org scan. This can also be a glob pattern. You can repeat this flag. Must use GitHub repo full name. Example: "trufflesecurity/driftwood", "trufflesecurity/d*"`).Strings()
 	githubScanIncludePaths      = githubScan.Flag("include-paths", "Path to file with newline separated regexes for files to include in scan.").Short('i').String()
 	githubScanExcludePaths      = githubScan.Flag("exclude-paths", "Path to file with newline separated regexes for files to exclude in scan.").Short('x').String()
 	githubScanIssueComments     = githubScan.Flag("issue-comments", "Include issue descriptions and comments in scan.").Bool()
@@ -839,7 +839,7 @@ func runSingleScan(ctx context.Context, cmd string, cfg engine.Config) (metrics,
 		}
 
 		if ref, err := eng.ScanGitHub(ctx, cfg); err != nil {
-			return scanMetrics, fmt.Errorf("failed to scan Github: %v", err)
+			return scanMetrics, fmt.Errorf("failed to scan GitHub: %v", err)
 		} else {
 			refs = []sources.JobProgressRef{ref}
 		}
@@ -852,7 +852,7 @@ func runSingleScan(ctx context.Context, cmd string, cfg engine.Config) (metrics,
 			DeleteCachedData:   *githubExperimentalDeleteCache,
 		}
 		if ref, err := eng.ScanGitHubExperimental(ctx, cfg); err != nil {
-			return scanMetrics, fmt.Errorf("failed to scan using Github Experimental: %v", err)
+			return scanMetrics, fmt.Errorf("failed to scan using GitHub Experimental: %v", err)
 		} else {
 			refs = []sources.JobProgressRef{ref}
 		}

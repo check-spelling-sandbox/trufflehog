@@ -53,7 +53,7 @@ func TestAzureContainerRegistry_Pattern(t *testing.T) {
 		},
 		{
 			name: "README",
-			input: `# AZURE-CICD-Deployment-with-Github-Actions
+			input: `# AZURE-CICD-Deployment-with-GitHub-Actions
 					## Save pass:
 
 					s3cEZKH3yytiVnJ3h+eI3qhhzf9l1vNwEi1+q+WGdd+ACRCZ7JD6

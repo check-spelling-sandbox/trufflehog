@@ -283,11 +283,11 @@ func TestSupportsLineNumbers(t *testing.T) {
 		expectedValue bool
 	}{
 		{"Git source", sourcespb.SourceType_SOURCE_TYPE_GIT, true},
-		{"Github source", sourcespb.SourceType_SOURCE_TYPE_GITHUB, true},
+		{"GitHub source", sourcespb.SourceType_SOURCE_TYPE_GITHUB, true},
 		{"Gitlab source", sourcespb.SourceType_SOURCE_TYPE_GITLAB, true},
 		{"Bitbucket source", sourcespb.SourceType_SOURCE_TYPE_BITBUCKET, true},
 		{"Gerrit source", sourcespb.SourceType_SOURCE_TYPE_GERRIT, true},
-		{"Github unauthenticated org source", sourcespb.SourceType_SOURCE_TYPE_GITHUB_UNAUTHENTICATED_ORG, true},
+		{"GitHub unauthenticated org source", sourcespb.SourceType_SOURCE_TYPE_GITHUB_UNAUTHENTICATED_ORG, true},
 		{"Public Git source", sourcespb.SourceType_SOURCE_TYPE_PUBLIC_GIT, true},
 		{"Filesystem source", sourcespb.SourceType_SOURCE_TYPE_FILESYSTEM, true},
 		{"Azure Repos source", sourcespb.SourceType_SOURCE_TYPE_AZURE_REPOS, true},
@@ -580,7 +580,7 @@ func TestProcessResult_SourceSupportsLineNumbers_LinkUpdated(t *testing.T) {
 		Data: []byte("abcde\nswordfish"),
 		SourceMetadata: &source_metadatapb.MetaData{
 			Data: &source_metadatapb.MetaData_Github{
-				Github: &source_metadatapb.Github{
+				GitHub: &source_metadatapb.Github{
 					Line: 1,
 					Link: "https://github.com/org/repo/blob/abcdef/file.txt#L1",
 				},
@@ -909,11 +909,11 @@ func TestFragmentFirstLineAndLink(t *testing.T) {
 			expectedLink: "", // Git doesn't support links
 		},
 		{
-			name: "Test Github Metadata",
+			name: "Test GitHub Metadata",
 			chunk: &sources.Chunk{
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Line: 5,
 							Link: "https://example.github.com",
 						},
@@ -943,7 +943,7 @@ func TestFragmentFirstLineAndLink(t *testing.T) {
 			chunk: &sources.Chunk{
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Link: "https://example.github.com",
 						},
 					},
@@ -983,10 +983,10 @@ func TestSetLink(t *testing.T) {
 		wantErr  bool
 	}{
 		{
-			name: "Github link set",
+			name: "GitHub link set",
 			input: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{},
+					GitHub: &source_metadatapb.Github{},
 				},
 			},
 			link:     "https://github.com/example",
@@ -1071,8 +1071,8 @@ func TestSetLink(t *testing.T) {
 			}
 
 			switch data := tt.input.GetData().(type) {
-			case *source_metadatapb.MetaData_Github:
-				assert.Equal(t, tt.wantLink, data.Github.Link, "Github link mismatch")
+			case *source_metadatapb.MetaData_GitHub:
+				assert.Equal(t, tt.wantLink, data.Github.Link, "GitHub link mismatch")
 			case *source_metadatapb.MetaData_Gitlab:
 				assert.Equal(t, tt.wantLink, data.Gitlab.Link, "Gitlab link mismatch")
 			case *source_metadatapb.MetaData_Bitbucket:

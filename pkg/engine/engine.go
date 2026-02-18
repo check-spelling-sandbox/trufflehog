@@ -1306,7 +1306,7 @@ func FragmentFirstLineAndLink(chunk *sources.Chunk) (int64, *int64, string) {
 	switch metadata := chunk.SourceMetadata.GetData().(type) {
 	case *source_metadatapb.MetaData_Git:
 		fragmentStart = &metadata.Git.Line
-	case *source_metadatapb.MetaData_Github:
+	case *source_metadatapb.MetaData_GitHub:
 		fragmentStart = &metadata.Github.Line
 		link = metadata.Github.Link
 	case *source_metadatapb.MetaData_Gitlab:
@@ -1356,7 +1356,7 @@ func UpdateLink(ctx context.Context, metadata *source_metadatapb.MetaData, link 
 	newLink := giturl.UpdateLinkLineNumber(ctx, link, line)
 
 	switch meta := metadata.GetData().(type) {
-	case *source_metadatapb.MetaData_Github:
+	case *source_metadatapb.MetaData_GitHub:
 		meta.Github.Link = newLink
 	case *source_metadatapb.MetaData_Gitlab:
 		meta.Gitlab.Link = newLink

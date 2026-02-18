@@ -409,7 +409,7 @@ func (s *Source) chunkGraphqlIssues(ctx context.Context, repoInfo repoInfo, issu
 			SourceType: s.Type(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(issue.URL),
 						Username:   sanitizer.UTF8(issue.Author.Login),
 						Repository: sanitizer.UTF8(repoInfo.fullName),
@@ -444,7 +444,7 @@ func (s *Source) chunkComments(ctx context.Context, repoInfo repoInfo, comments 
 			SourceType: s.Type(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(comment.URL),
 						Username:   sanitizer.UTF8(comment.Author.Login),
 						Repository: sanitizer.UTF8(repoInfo.fullName),
@@ -474,7 +474,7 @@ func (s *Source) chunkGraphqlPullRequests(ctx context.Context, repoInfo repoInfo
 			JobID:      s.JobID(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(pr.URL),
 						Username:   sanitizer.UTF8(pr.Author.Login),
 						Repository: sanitizer.UTF8(repoInfo.fullName),

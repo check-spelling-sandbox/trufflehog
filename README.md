@@ -245,7 +245,7 @@ trufflehog s3 --bucket=<bucket name> --results=verified,unknown
 trufflehog s3 --role-arn=<iam role arn>
 ```
 
-## 7: Scan a Github Repo using SSH authentication in Docker
+## 7: Scan a GitHub Repo using SSH authentication in Docker
 
 ```bash
 docker run --rm -v "$HOME/.ssh:/root/.ssh:ro" trufflesecurity/trufflehog:latest git ssh://github.com/trufflesecurity/test_keys
@@ -554,7 +554,7 @@ Exit Codes:
 - 1: An error was encountered. Sources may not have completed scans.
 - 183: No errors were encountered, but results were found. Will only be returned if `--fail` flag is used.
 
-## :octocat: TruffleHog Github Action
+## :octocat: TruffleHog GitHub Action
 
 ### General Usage
 

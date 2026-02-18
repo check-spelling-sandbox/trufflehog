@@ -131,7 +131,7 @@ func (s *Source) Init(aCtx context.Context, name string, jobID sources.JobID, so
 		SourceMetadataFunc: func(file, email, commit, timestamp, repository, repositoryLocalPath string, line int64) *source_metadatapb.MetaData {
 			return &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Commit:     sanitizer.UTF8(commit),
 						File:       sanitizer.UTF8(file),
 						Email:      sanitizer.UTF8(email),

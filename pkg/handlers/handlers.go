@@ -462,7 +462,7 @@ func populateChunkLineNumber(chunk *sources.Chunk, lineNumber int64) {
 		m.Bitbucket.Line = lineNumber
 	case *source_metadatapb.MetaData_Gerrit:
 		m.Gerrit.Line = lineNumber
-	case *source_metadatapb.MetaData_Github:
+	case *source_metadatapb.MetaData_GitHub:
 		m.Github.Line = lineNumber
 	case *source_metadatapb.MetaData_Gitlab:
 		m.Gitlab.Line = lineNumber
@@ -527,7 +527,7 @@ func getFileExtension(chunkSkel *sources.Chunk) string {
 		fileName = metadata.Filesystem.File
 	case *source_metadatapb.MetaData_Git:
 		fileName = metadata.Git.File
-	case *source_metadatapb.MetaData_Github:
+	case *source_metadatapb.MetaData_GitHub:
 		fileName = metadata.Github.File
 	case *source_metadatapb.MetaData_Gitlab:
 		fileName = metadata.Gitlab.File

@@ -15,7 +15,7 @@ import (
 type provider string
 
 const (
-	providerGithub    provider = "Github"
+	providerGithub    provider = "GitHub"
 	providerGitlab    provider = "Gitlab"
 	providerBitbucket provider = "Bitbucket"
 	providerAzure     provider = "Azure"

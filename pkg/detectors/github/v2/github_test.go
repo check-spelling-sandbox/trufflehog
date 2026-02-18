@@ -13,7 +13,7 @@ import (
 var (
 	validPattern = `[{
 		"_id": "1a8d0cca-e1a9-4318-bc2f-f5658ab2dcb5",
-		"name": "Github",
+		"name": "GitHub",
 		"type": "Detector",
 		"api": true,
 		"authentication_type": "",

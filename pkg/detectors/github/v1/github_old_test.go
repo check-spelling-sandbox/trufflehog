@@ -9,7 +9,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/engine/ahocorasick"
 )
 
-func TestGithub_Pattern(t *testing.T) {
+func TestGitHub_Pattern(t *testing.T) {
 	d := Scanner{}
 	ahoCorasickCore := ahocorasick.NewAhoCorasickCore([]detectors.Detector{d})
 
@@ -22,7 +22,7 @@ func TestGithub_Pattern(t *testing.T) {
 			name: "valid pattern",
 			input: `[{
 				"_id": "1a8d0cca-e1a9-4318-bc2f-f5658ab2dcb5",
-				"name": "Github",
+				"name": "GitHub",
 				"type": "Detector",
 				"api": true,
 				"authentication_type": "",

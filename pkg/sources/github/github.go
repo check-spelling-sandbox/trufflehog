@@ -291,7 +291,7 @@ func (s *Source) Init(aCtx context.Context, name string, jobID sources.JobID, so
 		SourceMetadataFunc: func(file, email, commit, timestamp, repository, repositoryLocalPath string, line int64) *source_metadatapb.MetaData {
 			return &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Commit:              sanitizer.UTF8(commit),
 						File:                sanitizer.UTF8(file),
 						Email:               sanitizer.UTF8(email),
@@ -1242,7 +1242,7 @@ func (s *Source) chunkGistComments(ctx context.Context, gistURL string, gistInfo
 			JobID:      s.JobID(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(comment.GetURL()),
 						Username:   sanitizer.UTF8(comment.GetUser().GetLogin()),
 						Email:      sanitizer.UTF8(comment.GetUser().GetEmail()),
@@ -1379,7 +1379,7 @@ func (s *Source) chunkIssues(ctx context.Context, repoInfo repoInfo, issues []*g
 			SourceType: s.Type(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(issue.GetHTMLURL()),
 						Username:   sanitizer.UTF8(issue.GetUser().GetLogin()),
 						Email:      sanitizer.UTF8(issue.GetUser().GetEmail()),
@@ -1446,7 +1446,7 @@ func (s *Source) chunkIssueComments(ctx context.Context, repoInfo repoInfo, comm
 			SourceType: s.Type(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(comment.GetHTMLURL()),
 						Username:   sanitizer.UTF8(comment.GetUser().GetLogin()),
 						Email:      sanitizer.UTF8(comment.GetUser().GetEmail()),
@@ -1542,7 +1542,7 @@ func (s *Source) chunkPullRequests(ctx context.Context, repoInfo repoInfo, prs [
 			JobID:      s.JobID(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(pr.GetHTMLURL()),
 						Username:   sanitizer.UTF8(pr.GetUser().GetLogin()),
 						Email:      sanitizer.UTF8(pr.GetUser().GetEmail()),
@@ -1578,7 +1578,7 @@ func (s *Source) chunkPullRequestComments(ctx context.Context, repoInfo repoInfo
 			SourceType: s.Type(),
 			SourceMetadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{
+					GitHub: &source_metadatapb.Github{
 						Link:       sanitizer.UTF8(comment.GetHTMLURL()),
 						Username:   sanitizer.UTF8(comment.GetUser().GetLogin()),
 						Email:      sanitizer.UTF8(comment.GetUser().GetEmail()),
@@ -1625,7 +1625,7 @@ func (s *Source) scanTarget(ctx context.Context, target sources.ChunkingTarget, 
 		JobID:      s.JobID(),
 		SecretID:   target.SecretID,
 		SourceMetadata: &source_metadatapb.MetaData{
-			Data: &source_metadatapb.MetaData_Github{Github: meta},
+			Data: &source_metadatapb.MetaData_Github{GitHub: meta},
 		},
 		Verify: s.verify,
 	}

@@ -934,10 +934,10 @@ func TestPopulateChunkLineNumber(t *testing.T) {
 			},
 		},
 		{
-			name: "Github metadata",
+			name: "GitHub metadata",
 			metadata: &source_metadatapb.MetaData{
 				Data: &source_metadatapb.MetaData_Github{
-					Github: &source_metadatapb.Github{File: "test.py"},
+					GitHub: &source_metadatapb.Github{File: "test.py"},
 				},
 			},
 			lineNumber: 200,

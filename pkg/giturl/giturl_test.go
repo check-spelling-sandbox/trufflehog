@@ -22,12 +22,12 @@ func Test_NormalizeOrgRepoURL(t *testing.T) {
 		"bitbucket is good":          {Provider: providerBitbucket, Repo: "https://bitbucket.com/org/repo", Out: "https://bitbucket.com/org/repo.git", Err: nil},
 		"example provider is good":   {Provider: "example", Repo: "https://example.com/org/repo", Out: "https://example.com/org/repo.git", Err: nil},
 		"example provider problem":   {Provider: "example", Repo: "https://example.com/org", Out: "", Err: errors.Errorf("example repo appears to be missing the repo name. Org: %q Repo url: %q", "org", "https://example.com/org")},
-		"no path":                    {Provider: providerGithub, Repo: "https://github.com", Out: "", Err: errors.Errorf("Github repo appears to be missing the path. Repo url: %q", "https://github.com")},
-		"org but no repo":            {Provider: providerGithub, Repo: "https://github.com/org", Out: "", Err: errors.Errorf("Github repo appears to be missing the repo name. Org: %q Repo url: %q", "org", "https://github.com/org")},
-		"org but no repo with slash": {Provider: providerGithub, Repo: "https://github.com/org/", Out: "", Err: errors.Errorf("Github repo appears to be missing the repo name. Org: %q Repo url: %q", "org", "https://github.com/org/")},
-		"two slashes":                {Provider: providerGithub, Repo: "https://github.com//", Out: "", Err: errors.Errorf("Github repo appears to be missing the org name. Repo url: %q", "https://github.com//")},
-		"repo with trailing slash":   {Provider: providerGithub, Repo: "https://github.com/org/repo/", Out: "", Err: errors.Errorf("Github repo contains a trailing slash. Repo url: %q", "https://github.com/org/repo/")},
-		"too many url path parts":    {Provider: providerGithub, Repo: "https://github.com/org/repo/unknown/", Out: "", Err: errors.Errorf("Github repo contains a trailing slash. Repo url: %q", "https://github.com/org/repo/unknown/")},
+		"no path":                    {Provider: providerGithub, Repo: "https://github.com", Out: "", Err: errors.Errorf("GitHub repo appears to be missing the path. Repo url: %q", "https://github.com")},
+		"org but no repo":            {Provider: providerGithub, Repo: "https://github.com/org", Out: "", Err: errors.Errorf("GitHub repo appears to be missing the repo name. Org: %q Repo url: %q", "org", "https://github.com/org")},
+		"org but no repo with slash": {Provider: providerGithub, Repo: "https://github.com/org/", Out: "", Err: errors.Errorf("GitHub repo appears to be missing the repo name. Org: %q Repo url: %q", "org", "https://github.com/org/")},
+		"two slashes":                {Provider: providerGithub, Repo: "https://github.com//", Out: "", Err: errors.Errorf("GitHub repo appears to be missing the org name. Repo url: %q", "https://github.com//")},
+		"repo with trailing slash":   {Provider: providerGithub, Repo: "https://github.com/org/repo/", Out: "", Err: errors.Errorf("GitHub repo contains a trailing slash. Repo url: %q", "https://github.com/org/repo/")},
+		"too many url path parts":    {Provider: providerGithub, Repo: "https://github.com/org/repo/unknown/", Out: "", Err: errors.Errorf("GitHub repo contains a trailing slash. Repo url: %q", "https://github.com/org/repo/unknown/")},
 	}
 
 	for name, tt := range tests {

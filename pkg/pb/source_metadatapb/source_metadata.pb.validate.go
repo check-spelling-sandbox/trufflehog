@@ -1153,14 +1153,14 @@ var _ interface {
 	ErrorName() string
 } = GitValidationError{}
 
-// Validate checks the field values on Github with the rules defined in the
+// Validate checks the field values on GitHub with the rules defined in the
 // proto definition for this message. If any rules are violated, the first
 // error encountered is returned, or nil if there are no violations.
 func (m *Github) Validate() error {
 	return m.validate(false)
 }
 
-// ValidateAll checks the field values on Github with the rules defined in the
+// ValidateAll checks the field values on GitHub with the rules defined in the
 // proto definition for this message. If any rules are violated, the result is
 // a list of violation errors wrapped in GithubMultiError, or nil if none found.
 func (m *Github) ValidateAll() error {
@@ -2849,7 +2849,7 @@ func (m *Forager) validate(all bool) error {
 	var errors []error
 
 	switch v := m.Metadata.(type) {
-	case *Forager_Github:
+	case *Forager_GitHub:
 		if v == nil {
 			err := ForagerValidationError{
 				field:  "Metadata",
@@ -4555,7 +4555,7 @@ func (m *MetaData) validate(all bool) error {
 			}
 		}
 
-	case *MetaData_Github:
+	case *MetaData_GitHub:
 		if v == nil {
 			err := MetaDataValidationError{
 				field:  "Data",

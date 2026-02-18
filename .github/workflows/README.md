@@ -45,4 +45,4 @@ The workflow uses the default `GITHUB_TOKEN` which has sufficient permissions to
 - List child teams and check team membership (for public teams)
 - Create commit statuses
 
-**Note**: If the `product-eng` team or its child teams are private, you may need to use a personal access token with appropriate permissions. The Github API returns 404 for non-members and for lack of permissions.
+**Note**: If the `product-eng` team or its child teams are private, you may need to use a personal access token with appropriate permissions. The GitHub API returns 404 for non-members and for lack of permissions.

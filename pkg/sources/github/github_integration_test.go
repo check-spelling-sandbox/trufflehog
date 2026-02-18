@@ -120,7 +120,7 @@ func TestSource_ScanComments(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Link:      "https://github.com/truffle-test-integration-org/another-test-repo/issues/1",
 							Username:  "truffle-sandbox",
 							Timestamp: "2023-06-22 23:33:46 +0000 UTC",
@@ -150,7 +150,7 @@ func TestSource_ScanComments(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Link:      "https://github.com/truffle-test-integration-org/another-test-repo/pull/2#discussion_r1242763304",
 							Username:  "truffle-sandbox",
 							Timestamp: "2023-06-26 21:00:11 +0000 UTC",
@@ -337,7 +337,7 @@ func TestSource_Scan(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/truffle-test-integration-org/another-test-repo.git",
 						},
 					},
@@ -362,7 +362,7 @@ func TestSource_Scan(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/truffle-test-integration-org/another-test-repo.git",
 						},
 					},
@@ -448,7 +448,7 @@ func TestSource_Scan(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/trufflesecurity/driftwood.git",
 						},
 					},
@@ -497,7 +497,7 @@ func TestSource_Scan(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/truffle-test-integration-org/another-test-repo.git",
 						},
 					},
@@ -591,7 +591,7 @@ func TestSource_paginateGists(t *testing.T) {
 				SourceName: "test source",
 				SourceMetadata: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://gist.github.com/fecf272c606ddbc5f8486f9c44821312.git",
 						},
 					},
@@ -729,7 +729,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Token{Token: githubToken}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "test-secrets",
 							Link:       "https://github.com/truffle-sandbox/test-secrets/blob/0416560b1330d8ac42045813251d85c688717eaf/new_key#L2",
 							Commit:     "0416560b1330d8ac42045813251d85c688717eaf",
@@ -747,7 +747,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Unauthenticated{}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/trufflesecurity/trufflehog.git",
 							Link:       "https://github.com/trufflesecurity/trufflehog/blob/33eed42e17fda8b1a66feaeafcd57efccff26c11/pkg/sources/s3/s3_test.go#L78",
 							Commit:     "33eed42e17fda8b1a66feaeafcd57efccff26c11",
@@ -765,7 +765,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Token{Token: githubToken}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/truffle-sandbox/test-secrets.git",
 							Link:       "https://github.com/truffle-sandbox/test-secrets/blob/70bef8590f87257c0992eecc7db529827a12b801/null_text_w_ptp.ipynb",
 							Commit:     "70bef8590f87257c0992eecc7db529827a12b801",
@@ -783,7 +783,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Token{Token: githubToken}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "https://github.com/trufflesecurity/trufflehog.git",
 							Link:       "https://github.com/trufflesecurity/trufflehog/commit/1c51106e35c3b3c327fe12e358177c03079bb771",
 							Commit:     "1c51106e35c3b3c327fe12e358177c03079bb771",
@@ -801,7 +801,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Unauthenticated{}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "test_keys",
 							Link:       "https://github.com/trufflesecurity/test_keys/blob/fbc14303ffbf8fb1c2c1914e8dda7d0121633aca/keys#L4",
 							Commit:     "fbc14303ffbf8fb1c2c1914e8dda7d0121633aca",
@@ -820,7 +820,7 @@ func TestSource_Chunks_TargetedScan(t *testing.T) {
 				connection: &sourcespb.GitHub{Credential: &sourcespb.GitHub_Unauthenticated{}},
 				queryCriteria: &source_metadatapb.MetaData{
 					Data: &source_metadatapb.MetaData_Github{
-						Github: &source_metadatapb.Github{
+						GitHub: &source_metadatapb.Github{
 							Repository: "test_keys",
 							Link:       "malformed-link",
 							Commit:     "fbc14303ffbf8fb1c2c1914e8dda7d0121633aca",
@@ -987,7 +987,7 @@ func TestSource_ScanCommentsWithGraphql(t *testing.T) {
 		SourceName: "test source",
 		SourceMetadata: &source_metadatapb.MetaData{
 			Data: &source_metadatapb.MetaData_Github{
-				Github: &source_metadatapb.Github{
+				GitHub: &source_metadatapb.Github{
 					Link:      "https://github.com/trufflesecurity/driftwood.git/issues/1",
 					Username:  "truffle-sandbox",
 					Timestamp: "2023-06-22 23:33:46 +0000 UTC",

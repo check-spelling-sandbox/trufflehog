@@ -45,7 +45,7 @@ To obtain the trace output, run trufflehog with the --log-level=5 flag.
 ### References
 
 <!---
-Information about referencing Github Issues: https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
+Information about referencing GitHub Issues: https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
 
 Are there any other GitHub issues (open or closed) or pull requests that should be linked here? Vendor documentation? For example:
 --->

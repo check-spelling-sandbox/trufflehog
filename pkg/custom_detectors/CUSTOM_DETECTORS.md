@@ -51,7 +51,7 @@ This guide will walk you through setting up a custom detector in TruffleHog to i
      - **`contains_special_char`**: Ensures the match contains at least one special character from the set `!@#$%^&*()_+-=[]{}|;:,.<>?`. Useful for complex passwords or encoded tokens.
     
 
-    [Here](/examples/generic_with_filters.yml) is an example of a custom detector using these parameters. 
+    [generic_with_filters.yml](/examples/generic_with_filters.yml) is an example of a custom detector using these parameters. 
 
 3. **Run TruffleHog with the Custom Detector**:
    - Execute TruffleHog, specifying your configuration file:

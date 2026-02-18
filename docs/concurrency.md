@@ -4,7 +4,7 @@
 
 ```mermaid
 sequenceDiagram
-    %% Setup the workers
+    %% Set up the workers
     participant Main
     Note over Main: e.startWorkers()<br />kicks off some number<br />of threads per worker type
     create participant ScannerWorkers

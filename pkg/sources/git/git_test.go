@@ -574,7 +574,7 @@ func TestEnumerate(t *testing.T) {
 	t.Parallel()
 	ctx := context.Background()
 
-	// Setup the connection to test enumeration.
+	// Set up the connection to test enumeration.
 	units := []string{
 		"foo", "bar", "baz",
 		"/path/to/dir/", "/path/to/another/dir/",

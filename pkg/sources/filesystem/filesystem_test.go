@@ -165,7 +165,7 @@ func TestEnumerate(t *testing.T) {
 	t.Parallel()
 	ctx := context.Background()
 
-	// Setup the connection to test enumeration.
+	// Set up the connection to test enumeration.
 	dir, err := os.MkdirTemp("", "trufflehog-test-enumerate")
 	assert.NoError(t, err)
 	defer os.RemoveAll(dir)
@@ -274,7 +274,7 @@ func TestEnumerateReporterErr(t *testing.T) {
 	t.Parallel()
 	ctx := context.Background()
 
-	// Setup the connection to test enumeration.
+	// Set up the connection to test enumeration.
 	units := []string{
 		"/one", "/two", "/three",
 		"/path/to/dir/", "/path/to/another/dir/",

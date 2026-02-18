@@ -274,12 +274,12 @@ func TestContainsLowercase(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "contains lower case",
+			name: "contains lowercase",
 			args: args{s: "g0AJBHdnhRG2"},
 			want: true,
 		},
 		{
-			name: "does not contains lower case",
+			name: "does not contains lowercase",
 			args: args{s: "V7T#MEA6@+TN"},
 			want: false,
 		},
